@@ -280,7 +280,7 @@ h2 {
 
 .contact-links a:hover {
     color: #004488;
-    text-decoration: none;
+    text-decoration: underline; /* volver a subrayar en el hover de contacto */
 }
 
 /* Footer */
