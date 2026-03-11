@@ -71,28 +71,33 @@ h2 {
 
 /* Hero Section */
 .hero {
-    background-color: #f8f9fa;
-    /* removed center text, layout moved to child */
-    padding: 50px 0; /* reduce top padding now that items are aligned vertically */
+    /* background image placed behind the text */
+    background: #f8f9fa url('../assets/images/hero-photo.png') center right/cover no-repeat;
+    /* make section full viewport height */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    position: relative;
+}
+
+/* remove default container side padding within hero so image can reach edges */
+.hero .container {
+    padding: 0;
 }
 
 .hero-content {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: stretch; /* stretch children to full section height */
+    gap: 0; /* remove automatic gap so image flushes right */
     flex-wrap: wrap;
-}
-
-.hero-image {
-    flex: 0 0 300px; /* square area, adjust as needed */
-    height: 300px; /* ensure square container */
-    overflow: hidden;
-}
-
-.hero-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    flex-direction: row-reverse; /* colocar la imagen a la derecha */
+}
+
+/* hero-image wrapper no longer needed (imagen se usa como fondo) */
+.hero-image {
+    display: none;
 }
 
 .hero-text {
@@ -115,14 +120,14 @@ h2 {
 .affiliation {
     font-size: 1.2rem;
     color: #777;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .keywords {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    justify-content: left;
+    gap: 20px;
 }
 
 .keywords span {
@@ -232,7 +237,6 @@ h2 {
 /* iconos ajustados al texto, usados en varias secciones */
 .icon-photo {
     width: 2em; /* tamaño relativo al texto */
-    height: 2em;
     object-fit: cover; /* evita deformaciones */
     border-radius: 50%; /* recorte circular si lo deseas */
     vertical-align: middle;
@@ -289,8 +293,14 @@ h2 {
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px; /* menos espacio entre parejas */
     align-items: center; /* evita que se estiren verticalmente */
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* icono y texto juntos */
 }
 
 .contact-links a {
