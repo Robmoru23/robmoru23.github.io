@@ -103,6 +103,8 @@ h2 {
 .hero-text {
     flex: 1 1 auto;
     text-align: left;
+    /* desplazar todo el texto 20px hacia la izquierda */
+    margin-left: -100px;
 }
 
 .hero h1 {
