@@ -192,10 +192,11 @@ h2 {
 }
 
 .about-image .icon-photo {
-    width: 20px; /* ajusta al tamaño deseado */
-    height: 20px;
+    width: 1em; /* tamaño relativo al texto */
+    height: 1em;
     object-fit: cover; /* evita deformaciones */
     border-radius: 50%; /* recorte circular */
+    vertical-align: middle;
 }
 
 .about-text {
