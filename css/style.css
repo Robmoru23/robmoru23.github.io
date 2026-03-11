@@ -167,6 +167,22 @@ h2 {
     font-size: 0.95rem;
 }
 
+/* Imagen de perfil redonda */
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about-image .profile-photo {
+    width: 200px; /* ajusta al tamaño deseado */
+    height: 200px;
+    object-fit: cover; /* evita deformaciones */
+    border-radius: 50%; /* recorte circular */
+    border: 3px solid #003366; /* opcional, borde elegante */
+}
+
 /* Contacto */
 .contact-form {
     max-width: 600px;
