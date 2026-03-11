@@ -169,6 +169,21 @@ h2 {
     font-size: 0.95rem;
 }
 
+/* enlaces de publicaciones: enlace cubre toda la tarjeta y elimina subrayado */
+.publication-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.publication-link,
+.publication-link * {
+    text-decoration: none !important;
+}
+.publication-link:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,51,102,0.1);
+}
+
 /* Imagen de perfil redonda y diseño de la sección "Sobre Mí" */
 .about-content {
     display: flex;
