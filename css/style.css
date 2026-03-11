@@ -175,10 +175,7 @@ h2 {
     text-decoration: none;
     color: inherit;
 }
-.publication-link,
-.publication-link * {
-    text-decoration: none !important;
-}
+
 .publication-link:hover .project-card {
     transform: translateY(-5px);
     box-shadow: 0 5px 25px rgba(0,51,102,0.1);
@@ -283,7 +280,7 @@ h2 {
 
 .contact-links a:hover {
     color: #004488;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Footer */
