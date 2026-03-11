@@ -195,8 +195,12 @@ h2 {
 .icon-photo {
     width: 1em; /* tamaño relativo al texto */
     height: 1em;
+    max-width: 1em;
+    max-height: 1em;
+    object-fit: cover; /* evita deformaciones */
     border-radius: 50%; /* recorte circular si lo deseas */
     vertical-align: middle;
+    flex: 0 0 auto; /* no permitir estiramiento en flex container */
 }
 
 .about-text {
@@ -250,6 +254,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 30px;
+    align-items: center; /* evita que se estiren verticalmente */
 }
 
 .contact-links a {
