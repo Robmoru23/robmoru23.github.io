@@ -168,6 +168,18 @@ h2 {
 }
 
 /* Imagen de perfil redonda y diseño de la sección "Sobre Mí" */
+
+/* enlaces de publicaciones: el enlace abarca toda la tarjeta */
+.publication-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.publication-link:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,51,102,0.1);
+}
+
 .about-content {
     display: flex;
     align-items: center;
