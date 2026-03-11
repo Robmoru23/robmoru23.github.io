@@ -191,11 +191,12 @@ h2 {
     border: 3px solid #003366; /* opcional, borde elegante */
 }
 
-.about-image .icon-photo {
+/* iconos ajustados al texto, usados en varias secciones */
+.icon-photo {
     width: 1em; /* tamaño relativo al texto */
     height: 1em;
     object-fit: cover; /* evita deformaciones */
-    border-radius: 50%; /* recorte circular */
+    border-radius: 50%; /* recorte circular si lo deseas */
     vertical-align: middle;
 }
 
