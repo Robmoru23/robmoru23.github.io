@@ -72,7 +72,7 @@ h2 {
 /* Hero Section */
 .hero {
     /* background image placed behind the text */
-    background: #f8f9fa url('../assets/images/hero-photo.png') center right/cover no-repeat;
+    background: #f8f9fa url('../assets/images/herophoto.png') center right/cover no-repeat;
     /* make section full viewport height */
     min-height: 100vh;
     display: flex;
@@ -127,7 +127,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    gap: 20px;
+    gap: 15px;
 }
 
 .keywords span {
