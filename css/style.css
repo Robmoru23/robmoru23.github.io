@@ -167,8 +167,16 @@ h2 {
     font-size: 0.95rem;
 }
 
-/* Imagen de perfil redonda */
+/* Imagen de perfil redonda y diseño de la sección "Sobre Mí" */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
 .about-image {
+    flex: 0 0 220px; /* ancho fijo, suficiente para la foto */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,6 +189,22 @@ h2 {
     object-fit: cover; /* evita deformaciones */
     border-radius: 50%; /* recorte circular */
     border: 3px solid #003366; /* opcional, borde elegante */
+}
+
+.about-text {
+    flex: 1 1 300px;
+    text-align: justify;
+}
+
+/* Responsivo: apilar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text {
+        text-align: left;
+    }
 }
 
 /* Contacto */
