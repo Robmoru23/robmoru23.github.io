@@ -191,6 +191,13 @@ h2 {
     border: 3px solid #003366; /* opcional, borde elegante */
 }
 
+.about-image .icon-photo {
+    width: 20px; /* ajusta al tamaño deseado */
+    height: 20px;
+    object-fit: cover; /* evita deformaciones */
+    border-radius: 50%; /* recorte circular */
+}
+
 .about-text {
     flex: 1 1 300px;
     text-align: justify;
@@ -203,7 +210,7 @@ h2 {
         text-align: center;
     }
     .about-text {
-        text-align: left;
+        text-align: justify;
     }
 }
 
