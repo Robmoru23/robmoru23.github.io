@@ -241,9 +241,14 @@ h2 {
     margin-top: 30px;
 }
 
+/* tamaño de foto de perfil escalable */
+:root {
+    --profile-scale: 0.9; /* factor multiplicador para mantener proporción */
+}
+
 .about-image .profile-photo {
-    width: 300px; /* ajusta al tamaño deseado */
-    height: 300px;
+    width: calc(480px * var(--profile-scale)); /* ancho base 300px */
+    height: calc(720px * var(--profile-scale)); /* altura igual al ancho */
     object-fit: cover; /* evita deformaciones */
     border-radius: 10px; /* esquinas redondeadas para recorte cuadrado */
     border: 2px solid #003366; /* opcional, borde elegante */
@@ -378,4 +383,178 @@ footer {
     h2 {
         font-size: 2rem;
     }
+}
+
+/* Sección Campos de Investigación */
+.research-fields {
+    background-color: #fff;
+    padding: 80px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+/* Estilos para la nube de tags */
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 25px; /* Espacio entre filas y columnas */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #f8f9fa;
+    color: #003366;
+    border: 1px solid #dee2e6;
+    border-radius: 40px; /* Muy redondeado para look de tag */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* Tamaños variables para dar énfasis */
+.tag-sm { font-size: 0.85rem; padding: 5px 12px; }
+.tag-md { font-size: 1rem; padding: 7px 16px; }
+.tag-lg { font-size: 1.15rem; padding: 9px 22px; }
+.tag-xl { font-size: 1.35rem; padding: 11px 28px; font-weight: 600; }
+
+/* Efecto hover */
+.tag:hover {
+    background-color: #003366;
+    color: #fff;
+    border-color: #003366;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,51,102,0.15);
+}
+
+/* Sección Campos de Investigación - Tarjetas */
+.research-fields-cards {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.field-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.field-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,51,102,0.1);
+    border-color: #003366;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.field-card h3 {
+    color: #003366;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.field-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.field-list li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed #dee2e6;
+}
+
+.field-list li:last-child {
+    border-bottom: none;
+}
+
+/* Sección Campos de Investigación - Malla de Nodos */
+.research-fields-grid {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.nodes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+
+.node-item {
+    background-color: #fff;
+    color: #003366;
+    padding: 12px 24px;
+    border-radius: 50px; /* Forma de píldora */
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: calc(0.05s * var(--i));
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.node-item:hover {
+    background-color: #003366;
+    color: #fff;
+    border-color: #003366;
+    transform: scale(1.08);
+    box-shadow: 0 15px 30px rgba(0,51,102,0.3);
+}
+
+/* Efecto de conexión visual (opcional) */
+.nodes-grid::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #003366, transparent);
+    margin-top: 30px;
+    opacity: 0.3;
 }
