@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roberto Morollón Ruiz | Investigador en Neurociencias y Bioingeniería</title>
+    <title>Roberto Morollón | Investigador en Neurociencias y Bioingeniería</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Fuentes profesionales: Open Sans o Lato de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -14,12 +14,12 @@
     <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Roberto Morollón Ruiz</div>
+            <div class="nav-brand">Roberto Morollón</div>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#investigacion">Investigación</a></li>
                 <li><a href="#publicaciones">Publicaciones</a></li>
+                <li><a href="#investigacion">Investigación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -29,9 +29,9 @@
     <section id="inicio" class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Roberto Morollón Ruiz</h1>
+                <h1>Roberto Morollón</h1>
                 <p class="subtitle">Doctor en Bioingeniería</p>
-                <p class="affiliation">Laboratorio de Neuroprosthesis Visuales</p>
+                <p class="affiliation">Laboratorio de Neuroprótesis Visuales</p>
                 <p class="affiliation">Instituto de Bioingeniería</p>
                 <p class="affiliation">Universidad Miguel Hernández</p>
 
@@ -48,6 +48,9 @@
                     <span>Realidad Virtual</span>
                 </div>
 
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/herophoto.png" alt="Foto hero" class="hero-photo">
             </div>
         </div>
     </section>
@@ -177,10 +180,11 @@
         <div class="container">
             <h2>Contacto</h2>
             <div class="contact-content">
-                <form class="contact-form">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                <!-- simple HTML-only mailto form -->
+                <form class="contact-form" action="mailto:robmoru23@gmail.com" method="GET" enctype="text/plain">
+                    <input name="Nombre" type="text" placeholder="Nombre" required>
+                    <input name="Email" type="email" placeholder="Email" required>
+                    <textarea name="Mensaje" placeholder="Mensaje" rows="5" required></textarea>
                     <button type="submit">Enviar Mensaje</button>
                 </form>
                 <div class="contact-links">
@@ -215,7 +219,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Roberto Morollón Ruiz. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Roberto Morollón. Todos los derechos reservados.</p>
         </div>
     </footer>
 
