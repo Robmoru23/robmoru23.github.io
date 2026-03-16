@@ -48,13 +48,14 @@ body {
 
 .nav-menu li a {
     text-decoration: none;
-    color: #333;
+    color: #636363;
     padding: 10px 15px;
     transition: color 0.3s;
 }
 
 .nav-menu li a:hover {
-    color: #003366; /* Azul marino */
+    color: #004f9e; /* Azul marino */
+    text-decoration: underline;
 }
 
 /* Secciones */
@@ -557,4 +558,723 @@ footer {
     background: linear-gradient(90deg, transparent, #003366, transparent);
     margin-top: 30px;
     opacity: 0.3;
+}
+/* ===== SECCIÓN DE HABILIDADES ===== */
+.skills-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+/* Categorías */
+.skill-category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 5px solid #003366;
+    padding-left: 20px;
+}
+
+.category-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+/* Grid de habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta de habilidad */
+.skill-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,51,102,0.1);
+    border-color: #003366;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+}
+
+.skill-level {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #003366;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Barra de progreso (estilizada como indicador visual) */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #003366, #004c99);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Tags de tecnologías asociadas */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tags span {
+    background-color: #e9ecef;
+    color: #003366;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s;
+}
+
+.skill-tags span:hover {
+    background-color: #003366;
+    color: #fff;
+    border-color: #003366;
+}
+
+/* Nube de metodologías */
+.methodology-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+}
+
+.method-item {
+    background-color: #fff;
+    color: #003366;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    transition: all 0.2s;
+}
+
+.method-item:hover {
+    background-color: #003366;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Idiomas */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+}
+
+.language-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-right: 1px solid #dee2e6;
+}
+
+.language-item:last-child {
+    border-right: none;
+}
+
+.language-name {
+    font-weight: 700;
+    color: #003366;
+    font-size: 1.2rem;
+}
+
+.language-level {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .category-title {
+        font-size: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .languages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .language-item {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        padding-bottom: 15px;
+    }
+    
+    .language-item:last-child {
+        border-bottom: none;
+    }
+}
+/* Soft Skills */
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+}
+
+.soft-skill-item {
+    background-color: #fff;
+    color: #003366;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border-left: 4px solid #003366;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: all 0.2s;
+    text-align: center;
+    font-weight: 500;
+}
+
+.soft-skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,51,102,0.1);
+    background-color: #003366;
+    color: #fff;
+}
+
+/* ===== SECCIÓN DE CONGRESOS ===== */
+.conferences-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+/* Filtros (opcional) */
+.conference-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-badge {
+    padding: 8px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: #003366;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-badge:hover,
+.filter-badge.active {
+    background-color: #003366;
+    color: #fff;
+    border-color: #003366;
+}
+
+/* Lista de congresos */
+.conference-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Elemento individual */
+.conference-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.conference-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(0,51,102,0.1);
+    border-color: #003366;
+}
+
+/* Badge del año */
+.conference-year-badge {
+    flex: 0 0 80px;
+    height: 80px;
+    background-color: #003366;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,51,102,0.2);
+}
+
+/* Contenido */
+.conference-content {
+    flex: 1;
+}
+
+.conference-title {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.conference-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    color: #666;
+}
+
+.conference-name {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.conference-type {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    color: #003366;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Estadísticas */
+.conference-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .conference-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .conference-year-badge {
+        flex: 0 0 60px;
+        height: 60px;
+        font-size: 1.2rem;
+        align-self: flex-start;
+    }
+    
+    .conference-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .conference-stats {
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .conference-filters {
+        gap: 8px;
+    }
+    
+    .filter-badge {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .conference-title {
+        font-size: 1rem;
+    }
+    
+    .conference-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* ===== SECCIÓN DE TFMS CO-DIRIGIDOS ===== */
+.theses-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Timeline */
+.theses-timeline {
+    max-width: 900px;
+    margin: 50px auto 0;
+    position: relative;
+}
+
+/* Línea vertical del timeline (opcional) */
+.theses-timeline::before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #003366 0%, #004c99 50%, #e9ecef 100%);
+    opacity: 0.3;
+}
+
+/* Marcador de año */
+.timeline-year {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.year-marker {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #003366;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,51,102,0.3);
+    z-index: 2;
+    border: 4px solid #fff;
+}
+
+/* Lista de tesis del año */
+.theses-list {
+    margin-left: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Tarjeta de tesis */
+.thesis-card {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    position: relative;
+}
+
+.thesis-card:hover {
+    transform: translateY(-5px) translateX(5px);
+    box-shadow: 0 15px 30px rgba(0,51,102,0.1);
+    border-color: #003366;
+}
+
+/* Icono con iniciales del estudiante */
+.thesis-icon {
+    flex: 0 0 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #003366, #004c99);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,51,102,0.2);
+}
+
+.student-initials {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Contenido de la tesis */
+.thesis-content {
+    flex: 1;
+}
+
+.thesis-title {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.thesis-student {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.student-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.student-badge {
+    background-color: #e9ecef;
+    color: #003366;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Tags de tecnologías/temas */
+.thesis-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.thesis-tag {
+    background-color: #f0f4f8;
+    color: #003366;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s;
+}
+
+.thesis-tag:hover {
+    background-color: #003366;
+    color: #fff;
+    border-color: #003366;
+}
+
+/* Resumen de supervisión */
+.supervision-summary {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.summary-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.summary-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.summary-stat .stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1;
+}
+
+.summary-stat .stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.summary-note {
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.note-icon {
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theses-timeline::before {
+        left: 40px;
+    }
+    
+    .year-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+        left: 10px;
+    }
+    
+    .theses-list {
+        margin-left: 80px;
+    }
+    
+    .thesis-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .thesis-icon {
+        flex: 0 0 50px;
+        height: 50px;
+        width: 50px;
+    }
+    
+    .student-initials {
+        font-size: 1.3rem;
+    }
+    
+    .thesis-title {
+        font-size: 1.1rem;
+    }
+    
+    .summary-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .year-marker {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+        left: 5px;
+    }
+    
+    .theses-list {
+        margin-left: 65px;
+    }
+    
+    .thesis-student {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .summary-stat .stat-number {
+        font-size: 2rem;
+    }
 }
