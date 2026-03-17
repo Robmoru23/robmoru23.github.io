@@ -1278,3 +1278,60 @@ footer {
         font-size: 2rem;
     }
 }
+/* ===== BOTÓN DE DESCARGA DE CV ===== */
+.cv-download {
+    margin-top: 30px;
+}
+
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #003366;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 2px solid #003366;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,51,102,0.3);
+}
+
+.cv-button:hover {
+    background-color: #fff;
+    color: #003366;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,51,102,0.4);
+}
+
+.button-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.cv-button:hover .button-icon {
+    transform: translateY(-2px);
+}
+
+/* Versión alternativa con borde más sutil */
+.cv-button-outline {
+    background-color: transparent;
+    color: #003366;
+    border: 2px solid #003366;
+    box-shadow: none;
+}
+
+.cv-button-outline:hover {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .cv-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
