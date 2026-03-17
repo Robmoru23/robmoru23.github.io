@@ -157,6 +157,9 @@
                         <span>TensorFlow</span>
                         <span>Scikit-learn</span>
                         <span>Keras</span>
+                        <span>OpenCV</span>
+                        <span>Tkinter</span>
+                        <span>PyQt</span>
                     </div>
                 </div>
                 
@@ -549,169 +552,205 @@
             <h2>Comunicaciones en Congresos</h2>
             <p class="section-subtitle">Participaciones en conferencias nacionales e internacionales</p>
             
-            <!-- Filtro visual por años (opcional) -->
+            <!-- Filtros por año -->
             <div class="conference-filters">
-                <span class="filter-badge active">Todos</span>
-                <span class="filter-badge">2025</span>
-                <span class="filter-badge">2024</span>
-                <span class="filter-badge">2023</span>
-                <span class="filter-badge">2022</span>
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="2025">2025</button>
+                <button class="filter-btn" data-filter="2024">2024</button>
+                <button class="filter-btn" data-filter="2023">2023</button>
+                <button class="filter-btn" data-filter="2022">2022</button>
             </div>
             
-            <!-- Lista de congresos -->
-            <div class="conference-list">
+            <!-- Grid de congresos (3 columnas) -->
+            <div class="conference-grid">
                 
                 <!-- 2025 -->
-                <div class="conference-item" data-year="2025">
-                    <div class="conference-year-badge">2025</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Motor Reaction Assessment in Multimodal Immersive and Laboratory Settings: A Time-Based Comparison in Athletes</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🇦🇷 Congreso Argentino de Bioingeniería</span>
-                            <span class="conference-type">Póster</span>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-032-06401-1_144" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2025">
+                        <div class="card-year">2025</div>
+                        <h3 class="card-title">Motor Reaction Assessment in Multimodal Immersive and Laboratory Settings: A Time-Based Comparison in Athletes</h3>
+                        <p class="author-name">Leonardo Ariel Cano, Roberto Morollón-Ruiz, María Soledad García, Gonzalo Daniel Gerez, Eduardo Oliveira Freire, Eduardo Fernández, Fernando Daniel Farfán</p>
+                        <h3 class="card-conference">🔬 Congreso Argentino de Bioingeniería</h3>
+                        <div class="card-type">
+                            <span>Póster</span>
+                            <span>Argentina</span>                    
                         </div>
                     </div>
-                </div>
-                
+                </a>
+
                 <!-- 2024 -->
-                <div class="conference-item" data-year="2024">
-                    <div class="conference-year-badge">2024</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Multimodal Immersive Environment for Evaluating Reaction Time and Decision-Making in Sport Situations: A Pilot Study on Time Analysis and Learning Effects</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🌐 MDPI - 5th International Electronic Conference on Applied Sciences (session Applied Biosciences and Bioengineering)</span>
-                            <span class="conference-type">Comunicación oral</span>
+                <a href="https://www.artificial-vision.org/" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2024">
+                        <div class="card-year">2024</div>
+                        <h3 class="card-title">Evaluating the feasibility of a cortical visual neuroprostheses based on intracortical microelectrodes for Orientation and Mobility Tasks</h3>
+                        <p class="author-name">Roberto Morollón Ruiz, Leili Soo, Dorota Waclawczyk, Fabrizio Grani, Rocio Lopez-Peco, Alfonso Rodil, Adrian Villamarín Ortiz, Illona Willemse, Joel Alejandro Cueva Garcés, Cristina Soto-Sánchez, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">👁️ Artificial Vision 2024 - The International Symposium on Visual Prosthetics</h3>
+                        <div class="card-type">
+                            <span>Presentación</span>
+                            <span>Alemania</span>                    
                         </div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="conference-item" data-year="2024">
-                    <div class="conference-year-badge">2024</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Enhancing Orientation and Mobility Assessments for Visually Impaired Individuals through AI-Based Body Tracking</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🧠 Brain and the Chip 2024</span>
-                            <span class="conference-type">Póster</span>
+                <a href="https://sciforum.net/paper/view/20841" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2024">
+                        <div class="card-year">2024</div>
+                        <h3 class="card-title">Multimodal Immersive Environment for Evaluating Reaction Time and Decision-Making in Sport Situations: A Pilot Study on Time Analysis and Learning Effects</h3>
+                        <p class="author-name">Leonardo Cano, Roberto Morollón Ruiz, Gonzalo Gerez, María García, Eduardo Freire, Eduardo Fernández-Jover, Fernando Farfán</p>
+                        <h3 class="card-conference">🌐 MDPI - 5th International Electronic Conference on Applied Sciences</h3>
+                        <div class="card-type">
+                            <span>Presentación</span>
+                            <span>Italia</span>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <a href="https://cortivis.org/inicio/the-brain-and-the-chip-2022/congresos-thebrainandthechip/the-brain-and-the-chip/" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2024">
+                        <div class="card-year">2024</div>
+                        <h3 class="card-title">Enhancing Orientation and Mobility Assessments for Visually Impaired Individuals through AI-Based Body Tracking</h3>
+                        <p class="author-name">Roberto Morollón Ruiz, Leili Soo, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">🧠 Brain and the Chip 2024</h3>
+                        <div class="card-type">
+                            <span>Póster</span>
+                            <span>España</span>
+                        </div>
+                    </div>
+                </a>
                 
-                <div class="conference-item" data-year="2024">
-                    <div class="conference-year-badge">2024</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">The implementation of artificial intelligence based body tracking for the assessment of orientation and mobility skills in visual impaired individuals</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2024</span>
-                            <span class="conference-type">Comunicación oral</span>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-61137-7_45" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2024">
+                        <div class="card-year">2024</div>
+                        <h3 class="card-title">The Implementation of Artificial Intelligence based Body Tracking for the Assessment of Orientation and Mobility Skills in Visual Impaired Individuals</h3>
+                        <p class="author-name">Roberto Morollón Ruiz, Joel Alejandro Cueva Garcés, Leili Soo, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2024</h3>
+                        <div class="card-type">
+                            <span>Presentación</span>
+                            <span>Portugal</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 
                 <!-- 2023 -->
-                <div class="conference-item" data-year="2023">
-                    <div class="conference-year-badge">2023</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">The importance of eye movement in visual cortical prosthesis</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🧬 IBRO Neuroscience Reports</span>
-                            <span class="conference-type">Póster</span>
+                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)02070-5/fulltext" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2023">
+                        <div class="card-year">2023</div>
+                        <h3 class="card-title">A new environment for assessing orientation and mobility in persons with severe visual impairments</h3>
+                        <p class="author-name">Roberto Morollon Ruiz, Leili Soo, Mikel Val-Calvo, Rocio López-Peco, Fabrizio Grani, Dorota Waclawczyk, Alfonso Rodil Doblado, Cristina Soto Sanchez, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">🧬 IBRO Neuroscience Reports</h3>
+                        <div class="card-type">
+                            <span>Póster</span>
+                            <span>España</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="conference-item" data-year="2023">
-                    <div class="conference-year-badge">2023</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">A new environment for assessing orientation and mobility in persons with severe visual impairments</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🧬 IBRO Neuroscience Reports</span>
-                            <span class="conference-type">Póster</span>
+                    </div> 
+                </a>
+
+                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)01538-5/fulltext" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2023">
+                        <div class="card-year">2023</div>
+                        <h3 class="card-title">The importance of eye movement in visual cortical prosthesis</h3>
+                        <p class="author-name">Dorota Waclawczyk, Avi Caspi, Leili Soo, Fabrizio Grani, Rocio Lopez Peco, Alfonso Rodil Doblado, Roberto Morollon Ruiz, Cristina Soto Sanchez, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">🧬 IBRO Neuroscience Reports</h3>
+                        <div class="card-type">
+                            <span>Póster</span>
+                            <span>España</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="conference-item" data-year="2023">
-                    <div class="conference-year-badge">2023</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Advantages of bidirectional cortical visual prostheses</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🧬 IBRO Neuroscience Reports</span>
-                            <span class="conference-type">Póster</span>
+                    </div> 
+                </a>
+
+                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)02065-1/fulltext" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2023">
+                        <div class="card-year">2023</div>
+                        <h3 class="card-title">Advantages of bidirectional cortical visual prostheses</h3>
+                        <p class="author-name">Fabrizio Grani, Mikel Val-Calvo, Rocio Lopez Peco, Alfonso Rodil Doblado, Dorota Waclawczyk, Roberto Morollon Ruiz, Leili Soo, Cristina Soto Sanchez, Marcos Villamarín Ortiz, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">🧬 IBRO Neuroscience Reports</h3>
+                        <div class="card-type">
+                            <span>Póster</span>
+                            <span>España</span>
                         </div>
-                    </div>
-                </div>
+                    </div> 
+                </a>    
                 
-                <div class="conference-item" data-year="2023">
-                    <div class="conference-year-badge">2023</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Mobility and Orientation Assessment in Intracortical Visual Neuroprosthesis User</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🎓 EnTRAIN Vision Summer School</span>
-                            <span class="conference-type">Comunicación oral</span>
-                        </div>
+                <div class="conference-card" data-year="2023">
+                    <div class="card-year">2023</div>
+                    <h3 class="card-title">Mobility and Orientation Assessment in Intracortical Visual Neuroprosthesis User</h3>
+                    <p class="author-name">Roberto Morollon Ruiz, Mikel Val-Calvo, Leili Soo, Eduardo Fernández Jover</p>
+                    <h3 class="card-conference">🎓 EnTRAIN Vision Summer School 2023</h3>
+                    <div class="card-type">
+                        <span>Presentación</span>
+                        <span>España</span>
                     </div>
-                </div>
-                
+                </div> 
+
                 <!-- 2022 -->
-                <div class="conference-item" data-year="2022">
-                    <div class="conference-year-badge">2022</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Mobility and Orientation in Intracortical Visual Neuroprosthesis</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🧠 Brain and the Chip 2022</span>
-                            <span class="conference-type">Póster</span>
+                <a href="https://cortivis.org/inicio/the-brain-and-the-chip-2022/" target="_blank" rel="noopener" class="conference-card-link">  
+                    <div class="conference-card" data-year="2022">
+                        <div class="card-year">2022</div>
+                        <h3 class="card-title">Mobility and Orientation in Intracortical Visual Neuroprosthesis</h3>
+                        <p class="author-name">Roberto Morollon Ruiz, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">🧠 Brain and the Chip 2022</h3>
+                        <div class="card-type">
+                            <span>Póster</span>
+                            <span>España</span>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06242-1_38" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2022">
+                        <div class="card-year">2022</div>
+                        <h3 class="card-title">Horizon cyber-vision: a cybernetic approach for a cortical visual prosthesis</h3>
+                        <p class="author-name">Mikel Val Calvo, Roberto Morollón Ruiz, Leili Soo, Dorota Wacławczyk, Fabrizio Grani, José Manuel Ferrández, Eduardo Fernández Jover</p>
+                        <h3 class="card-conference">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2022</h3>
+                        <div class="card-type">
+                            <span>Presentación</span>
+                            <span>España</span>
+                        </div>
+                    </div>   
+                </a> 
                 
-                <div class="conference-item" data-year="2022">
-                    <div class="conference-year-badge">2022</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">The assessment of activities of daily living skills using visual prosthesis</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2022</span>
-                            <span class="conference-type">Comunicación oral</span>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06527-9_49" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2022">
+                        <div class="card-year">2022</div>
+                        <h3 class="card-title">Development and validation of a novel technology for postural analysis and human kinematics</h3>
+                        <p class="author-name">Rocío López Peco, Roberto Morollón Ruiz, Cristina Soto-Sánchez, Eduardo Fernández</p>
+                        <h3 class="card-conference">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2022</h3>
+                        <div class="card-type">
+                            <span>Póster</span>
+                            <span>España</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="conference-item" data-year="2022">
-                    <div class="conference-year-badge">2022</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Development and validation of a novel technology for postural analysis and human kinematics</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2022</span>
-                            <span class="conference-type">Comunicación oral</span>
+                </a>
+
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06242-1_39" target="_blank" rel="noopener" class="conference-card-link">
+                    <div class="conference-card" data-year="2022">
+                        <div class="card-year">2022</div>
+                        <h3 class="card-title">The assessment of activities of daily living skills using visual prosthesis</h3>
+                        <p class="author-name">Dorota Waclawczyk, Leili Soo, Mikel Val, Roberto Morollon, Fabrizio Grani, Eduardo Fernandez Jover</p>
+                        <h3 class="card-conference">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2022</h3>
+                        <div class="card-type">
+                            <span>Presentación</span>
+                            <span>España</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="conference-item" data-year="2022">
-                    <div class="conference-year-badge">2022</div>
-                    <div class="conference-content">
-                        <h3 class="conference-title">Horizon cyber-vision: a cybernetic approach for a cortical visual prosthesis</h3>
-                        <div class="conference-meta">
-                            <span class="conference-name">🤖 International Work-Conference on the Interplay between Natural and Artificial Computation (IWINAC) 2022</span>
-                            <span class="conference-type">Comunicación oral</span>
-                        </div>
-                    </div>
-                </div>
-                
+                </a>
             </div>
             
-            <!-- Estadísticas rápidas (opcional) -->
-            <div class="conference-stats">
-                <div class="stat-item">
-                    <span class="stat-number">14</span>
-                    <span class="stat-label">Comunicaciones</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">7</span>
-                    <span class="stat-label">Congresos internacionales</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">4</span>
-                    <span class="stat-label">Países</span>
+            <!-- Resumen de Congresos -->
+            <div class="supervision-summary">
+                <div class="summary-stats">
+                    <div class="summary-stat">
+                        <span class="stat-number">13</span>
+                        <span class="stat-label">Comunicaciones</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Congresos internacionales</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Países</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -723,16 +762,18 @@
             <h2>Proyectos de Investigación</h2>
             
             <div class="project-card">
-                <h3>Evaluación Comportamental en Prótesis Visuales Corticales</h3>
+                <h3>Evaluación del Comportamiento en Prótesis Visuales Corticales</h3>
                 <p class="project-role"><strong>Tesis Doctoral</strong> - Doctorado en Bioingeniería - UMH</p>
                 <p class="project-desc">Desarrollo de protocolos comportamentales y algoritmos de análisis para evaluar la percepción visual inducida por estimulación intracortical en modelos animales. Integración de datos electrophysiológicos y de comportamiento para optimizar estrategias de estimulación.</p>
                 <div class="project-tech">
                     <span>Python</span>
-                    <span>MATLAB</span>
+                    <span>Comportamiento</span>
                     <span>Electrofisiología</span>
-                    <span>Análisis de Video</span>
+                    <span>Ensayo Clinico</span>
+                    <span>Protesis Visuales Intracorticales</span>
+
                 </div>
-                <p class="project-institution">Biomedical Neuroengineering Lab · Universidad Miguel Hernández (2020 - Presente)</p>
+                <p class="project-institution">Biomedical Neuroengineering Group · Instituto de Bioingeniería · Universidad Miguel Hernández (2020 - 2026)</p>
             </div>
 
             <div class="project-card">
@@ -746,7 +787,7 @@
                     <span>sEMG</span>
                     <span>Procesamiento de Señales</span>
                 </div>
-                <p class="project-institution">RoViT Lab · Universidad de Alicante (2020)</p>
+                <p class="project-institution">RoViT Lab · Escuela Politécnica Superior · Universidad de Alicante (2020)</p>
             </div>
 
             <div class="project-card">
@@ -761,7 +802,7 @@
                     <span>Modelado Computacional</span>
                     <span>Python</span>
                 </div>
-                <p class="project-institution">Comportamiento de los organismos · Instituto de Neurociencias · Universidad Miguel Hernández (2019)</p>
+                <p class="project-institution">Comportamiento de los organismos · Instituto de Neurociencias · CSIC · Universidad Miguel Hernández (2019)</p>
             </div>
             
             <div class="project-card">
@@ -775,7 +816,7 @@
                     <span>R</span>
                     <span>t de Student</span>
                 </div>
-                <p class="project-institution">Zoo Aquarium de Madrid (2017)</p>
+                <p class="project-institution">Zoo Aquarium de Madrid · Universidad Complutense de Madrid · Universidad de Alicante (2017)</p>
 
             </div>
         </div>
@@ -804,7 +845,6 @@
                                 <h3 class="thesis-title">Uso de un entorno realista (Streetlab) para la evaluación de la influencia del sonido en la orientación y movilidad de personas con patologías visuales (simuladas)</h3>
                                 <div class="thesis-student">
                                     <span class="student-name">Joel Alejandro Cueva Garcés</span>
-                                    <span class="student-badge">Estudiante</span>
                                 </div>
                                 <div class="thesis-tags">
                                     <span class="thesis-tag">Realidad Virtual</span>
@@ -825,51 +865,12 @@
                         
                         <div class="thesis-card">
                             <div class="thesis-icon">
-                                <span class="student-initials">CP</span>
-                            </div>
-                            <div class="thesis-content">
-                                <h3 class="thesis-title">Aplicaciones domóticas para personas con discapacidad con el sensor Azure Kinect</h3>
-                                <div class="thesis-student">
-                                    <span class="student-name">Chloé Pelletier</span>
-                                    <span class="student-badge">Estudiante</span>
-                                </div>
-                                <div class="thesis-tags">
-                                    <span class="thesis-tag">Domótica</span>
-                                    <span class="thesis-tag">Azure Kinect</span>
-                                    <span class="thesis-tag">Discapacidad</span>
-                                    <span class="thesis-tag">Visión por Computador</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="thesis-card">
-                            <div class="thesis-icon">
-                                <span class="student-initials">VC</span>
-                            </div>
-                            <div class="thesis-content">
-                                <h3 class="thesis-title">Desarrollo de entornos virtuales para restaurar o mejorar la percepción de las personas con discapacidad visual</h3>
-                                <div class="thesis-student">
-                                    <span class="student-name">Valentine Cohignac</span>
-                                    <span class="student-badge">Estudiante</span>
-                                </div>
-                                <div class="thesis-tags">
-                                    <span class="thesis-tag">Realidad Virtual</span>
-                                    <span class="thesis-tag">Discapacidad Visual</span>
-                                    <span class="thesis-tag">Percepción</span>
-                                    <span class="thesis-tag">Unity</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="thesis-card">
-                            <div class="thesis-icon">
                                 <span class="student-initials">ES</span>
                             </div>
                             <div class="thesis-content">
                                 <h3 class="thesis-title">Estudios de orientación y movilidad aproximación del empleo de la memoria espacial para la creación de mapas mentales en un entorno real vs un entorno virtual</h3>
                                 <div class="thesis-student">
                                     <span class="student-name">Estefanía Soto Astacio</span>
-                                    <span class="student-badge">Estudiante</span>
                                 </div>
                                 <div class="thesis-tags">
                                     <span class="thesis-tag">Memoria Espacial</span>
@@ -888,7 +889,6 @@
                                 <h3 class="thesis-title">Desarrollo y validación de una herramienta de integración de videovigilancia y seguimiento corporal basada en Deep Learning</h3>
                                 <div class="thesis-student">
                                     <span class="student-name">Darío Peñín Franch</span>
-                                    <span class="student-badge">Estudiante</span>
                                 </div>
                                 <div class="thesis-tags">
                                     <span class="thesis-tag">Deep Learning</span>
@@ -899,6 +899,42 @@
                             </div>
                         </div>
                         
+                        <div class="thesis-card">
+                            <div class="thesis-icon">
+                                <span class="student-initials">CP</span>
+                            </div>
+                            <div class="thesis-content">
+                                <h3 class="thesis-title">Aplicaciones domóticas para personas con discapacidad con el sensor Azure Kinect</h3>
+                                <div class="thesis-student">
+                                    <span class="student-name">Chloé Pelletier</span>
+                                </div>
+                                <div class="thesis-tags">
+                                    <span class="thesis-tag">Domótica</span>
+                                    <span class="thesis-tag">Azure Kinect</span>
+                                    <span class="thesis-tag">Discapacidad</span>
+                                    <span class="thesis-tag">Visión por Computador</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="thesis-card">
+                            <div class="thesis-icon">
+                                <span class="student-initials">VC</span>
+                            </div>
+                            <div class="thesis-content">
+                                <h3 class="thesis-title">Desarrollo de entornos virtuales para restaurar o mejorar la percepción de las personas con discapacidad visual</h3>
+                                <div class="thesis-student">
+                                    <span class="student-name">Valentine Cohignac</span>
+                                </div>
+                                <div class="thesis-tags">
+                                    <span class="thesis-tag">Realidad Virtual</span>
+                                    <span class="thesis-tag">Discapacidad Visual</span>
+                                    <span class="thesis-tag">Percepción</span>
+                                    <span class="thesis-tag">Unreal Engine</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 
@@ -906,26 +942,6 @@
                 <div class="timeline-year">
                     <div class="year-marker">2021</div>
                     <div class="theses-list">
-                        
-                        <div class="thesis-card">
-                            <div class="thesis-icon">
-                                <span class="student-initials">RL</span>
-                            </div>
-                            <div class="thesis-content">
-                                <h3 class="thesis-title">Desarrollo y validación de una tecnología para el análisis postural y cinemático humano</h3>
-                                <div class="thesis-student">
-                                    <span class="student-name">Rocío López Peco</span>
-                                    <span class="student-badge">Estudiante</span>
-                                </div>
-                                <div class="thesis-tags">
-                                    <span class="thesis-tag">Análisis Postural</span>
-                                    <span class="thesis-tag">Cinemática</span>
-                                    <span class="thesis-tag">Validación</span>
-                                    <span class="thesis-tag">Biomecánica</span>
-                                </div>
-                            </div>
-                        </div>
-                        
                         <div class="thesis-card">
                             <div class="thesis-icon">
                                 <span class="student-initials">CG</span>
@@ -934,13 +950,30 @@
                                 <h3 class="thesis-title">Desarrollo de una nueva herramienta para la evaluación de la movilidad y de la orientación en una cueva de entornos virtuales enfocada a la rehabilitación de discapacidades visuales</h3>
                                 <div class="thesis-student">
                                     <span class="student-name">Cristina García Miralles</span>
-                                    <span class="student-badge">Estudiante</span>
                                 </div>
                                 <div class="thesis-tags">
                                     <span class="thesis-tag">Realidad Virtual</span>
                                     <span class="thesis-tag">Rehabilitación</span>
                                     <span class="thesis-tag">Discapacidad Visual</span>
                                     <span class="thesis-tag">Entornos Virtuales</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thesis-card">
+                            <div class="thesis-icon">
+                                <span class="student-initials">RL</span>
+                            </div>
+                            <div class="thesis-content">
+                                <h3 class="thesis-title">Desarrollo y validación de una tecnología para el análisis postural y cinemático humano</h3>
+                                <div class="thesis-student">
+                                    <span class="student-name">Rocío López Peco</span>
+                                </div>
+                                <div class="thesis-tags">
+                                    <span class="thesis-tag">Análisis Postural</span>
+                                    <span class="thesis-tag">Cinemática</span>
+                                    <span class="thesis-tag">Validación</span>
+                                    <span class="thesis-tag">Biomecánica</span>
                                 </div>
                             </div>
                         </div>
@@ -968,7 +1001,7 @@
                 </div>
                 <p class="summary-note">
                     <span class="note-icon">🎓</span> 
-                    Todos los trabajos desarrollados en el Laboratorio de Neuroprótesis Visuales, 
+                    Todos los trabajos desarrollados en el Laboratorio de Neuroprótesis Visuales, Instituto de Neurociencias, UMH, 
                     abordando temas de rehabilitación, realidad virtual, visión artificial y tecnologías asistivas.
                 </p>
             </div>

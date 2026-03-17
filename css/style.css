@@ -802,115 +802,208 @@ footer {
     color: #fff;
 }
 
-/* ===== SECCIÓN DE CONGRESOS ===== */
+/* ===== SECCIÓN DE CONGRESOS - GRID 3 COLUMNAS ===== */
 .conferences-section {
     padding: 80px 0;
     background-color: #fff;
 }
 
-/* Filtros (opcional) */
+/* Filtros */
 .conference-filters {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
-.filter-badge {
-    padding: 8px 20px;
+.filter-btn {
+    padding: 10px 25px;
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #003366;
     cursor: pointer;
     transition: all 0.3s;
-}
-
-.filter-badge:hover,
-.filter-badge.active {
-    background-color: #003366;
-    color: #fff;
-    border-color: #003366;
-}
-
-/* Lista de congresos */
-.conference-list {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Elemento individual */
-.conference-item {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 35px;
-    padding: 25px;
-    background-color: #f8f9fa;
-    border-radius: 12px;
-    border: 1px solid #e9ecef;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.conference-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 25px rgba(0,51,102,0.1);
-    border-color: #003366;
-}
-
-/* Badge del año */
-.conference-year-badge {
-    flex: 0 0 80px;
-    height: 80px;
-    background-color: #003366;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,51,102,0.2);
-}
-
-/* Contenido */
-.conference-content {
-    flex: 1;
-}
-
-.conference-title {
-    font-size: 1.2rem;
-    color: #003366;
-    margin-bottom: 15px;
-    line-height: 1.4;
-    font-weight: 600;
-}
-
-.conference-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-    color: #666;
-}
-
-.conference-name {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.conference-type {
-    font-size: 0.85rem;
-    padding: 4px 12px;
-    background-color: #e9ecef;
-    border-radius: 20px;
-    color: #003366;
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+.filter-btn:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: #003366;
+    color: #fff;
+    border-color: #003366;
+    box-shadow: 0 5px 15px rgba(0,51,102,0.3);
+}
+
+/* Grid de 3 columnas */
+.conference-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Tarjeta de congreso */
+.conference-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.conference-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,51,102,0.1);
+    border-color: #003366;
+}
+
+/* Enlace que envuelve la tarjeta */
+.conference-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.conference-card-link:hover {
+    transform: translateY(-5px);
+}
+
+/* La tarjeta mantiene su estilo pero sin efecto hover propio */
+.conference-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* El hover ahora se aplica al enlace, pero queremos que la tarjeta cambie */
+.conference-card-link:hover .conference-card {
+    border-color: #003366;
+    box-shadow: 0 15px 30px rgba(0,51,102,0.1);
+}
+
+/* Asegurar que los elementos internos mantienen su color */
+.conference-card-link .card-title,
+.conference-card-link .author-name,
+.conference-card-link .card-conference {
+    color: inherit;
+}
+
+/* Año destacado */
+.card-year {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    align-self: flex-start;
+    letter-spacing: 0.5px;
+}
+
+/* Título */
+.card-title {
+    font-size: 1rem;
+    color: #003366;
+    margin-bottom: 10px; /* reducido de 15px a 10px */
+    line-height: 1.5;
+    font-weight: 600;
+    text-align: justify;
+    /* eliminamos flex-grow: 1 */
+}
+
+.author-name {
+    font-size: 0.8rem;
+    color: #8f8f8f;
+    margin-bottom: 15px; /* espacio después de autores */
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.card-conference {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-align: justify;
+
+}
+
+/* Tipo (póster/oral) */
+.card-type {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: auto; /* Esto empuja el tipo hacia abajo */
+    margin-bottom: 0;
+}
+
+.card-type span {
+    background-color: #e9ecef;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: #003366;
+    border: 2px solid #dee2e6;
+}
+/* Contador de resultados */
+.conference-counter {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 50px;
+    color: #666;
+    font-size: 0.95rem;
+    border: 1px solid #e9ecef;
+}
+
+.conference-counter span {
+    font-weight: 700;
+    color: #003366;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .conference-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .conference-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
 
 /* Estadísticas */
