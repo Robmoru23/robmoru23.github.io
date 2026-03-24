@@ -1727,3 +1727,48 @@ footer {
         border: 1px solid #e9ecef;
     }
 }
+
+/* ===== CENTRAR EMAIL EN SECCIÓN CONTACTO ===== */
+.contact-email {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-email p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.email-link {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #003366;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 25px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 2px solid #003366;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.email-link:hover {
+    background-color: #003366;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,51,102,0.2);
+}
+
+.email-note {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 12px;
+}
