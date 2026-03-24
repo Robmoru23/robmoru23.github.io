@@ -95,19 +95,22 @@ h2 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Overlay semitransparente para mejorar legibilidad */
 .hero-overlay {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        135deg,
-        rgba(0, 51, 102, 0.897) 0%,
-        rgba(0, 51, 102, 0) 20%,
+        0deg,
+        rgb(0, 51, 102, 1) 0%,
+        rgba(0, 51, 102, 0.2) 20%,
         rgba(0, 51, 102, 0) 100%
     );
     z-index: 1;
@@ -120,11 +123,11 @@ h2 {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    padding: 100px 10px;
+    padding: 100px 10px 10px 25px;
 }
 
 .hero-text {
-    max-width: 535px;
+    max-width: 545px;
     text-align: left;
     background-color: rgba(0, 0, 0, 0.144);
     padding: 40px;
@@ -136,7 +139,7 @@ h2 {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .subtitle {
@@ -244,7 +247,7 @@ h2 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .hero-text {
         padding: 20px;
     }
@@ -338,33 +341,9 @@ h2 {
     box-shadow: 0 5px 25px rgba(0,51,102,0.1);
 }
 
-/* Imagen de perfil redonda y diseño de la sección "Sobre Mí" */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.about-image {
-    flex: 0 0 220px; /* ancho fijo, suficiente para la foto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
 /* tamaño de foto de perfil escalable */
 :root {
     --profile-scale: 0.9; /* factor multiplicador para mantener proporción */
-}
-
-.about-image .profile-photo {
-    width: calc(480px * var(--profile-scale)); /* ancho base 300px */
-    height: calc(720px * var(--profile-scale)); /* altura igual al ancho */
-    object-fit: cover; /* evita deformaciones */
-    border-radius: 10px; /* esquinas redondeadas para recorte cuadrado */
-    border: 2px solid #003366; /* opcional, borde elegante */
 }
 
 /* iconos ajustados al texto, usados en varias secciones */
@@ -374,39 +353,6 @@ h2 {
     border-radius: 50%; /* recorte circular si lo deseas */
     vertical-align: middle;
     flex: 0 0 auto; /* no permitir estiramiento en flex container */
-}
-
-.about-text {
-    flex: 1 1 300px;
-    text-align: justify;
-}
-
-/* espacio entre párrafos en la sección "Sobre mí" */
-.about-text p {
-    margin-bottom: 10px;
-}
-
-/* Responsivo: apilar en pantallas pequeñas */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-text {
-        text-align: justify;
-    }
-    /* Hero section stack and center image on small screens */
-    .hero-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .hero-text {
-        margin-left: 0;
-    }
-    .hero-image {
-        margin-top: 20px;
-    }
 }
 
 /* Contacto */
@@ -477,7 +423,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .nav-menu {
-        display: none; /* En un proyecto real, aquí iría un menú hamburguesa con JS */
+        display: none; 
     }
     
     .hero h1 {
@@ -1086,13 +1032,13 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .conference-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .conference-grid {
         grid-template-columns: 1fr;
     }
@@ -1168,7 +1114,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .conference-filters {
         gap: 8px;
     }
@@ -1448,7 +1394,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .year-marker {
         width: 50px;
         height: 50px;
@@ -1528,7 +1474,7 @@ footer {
     }
 }
 
-/* ===== MENÚ HAMBURGUESA - VERSIÓN DERECHA 50% ===== */
+/* ===== MENÚ HAMBURGUESA - VERSIÓN CORREGIDA ===== */
 /* Botón hamburguesa */
 .menu-toggle {
     display: none;
@@ -1538,6 +1484,8 @@ footer {
     height: 21px;
     cursor: pointer;
     z-index: 1001;
+    position: relative;
+    right: 0;
 }
 
 .menu-toggle .bar {
@@ -1548,37 +1496,30 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Animación para convertir hamburguesa en X */
-.menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-}
-
 /* Responsive: mostrar hamburguesa en móvil */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
+        margin-left: auto; /* Empuja la hamburguesa a la derecha */
+    }
+    
+    .navbar .container {
+        justify-content: space-between;
+        width: 100%;
     }
     
     .nav-menu {
         position: fixed;
         top: 70px;
-        right: -50%; /* Comienza fuera de la pantalla por la derecha */
-        width: 50%; /* Ocupa la mitad de la pantalla */
+        right: -50%;
+        width: 50%;
         height: calc(100vh - 70px);
         background-color: #003366;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         padding-top: 40px;
-        transition: right 0.3s ease-in-out; /* Transición desde la derecha */
+        transition: right 0.3s ease-in-out;
         box-shadow: -5px 0 15px rgba(0,0,0,0.2);
         z-index: 1000;
         overflow-y: auto;
@@ -1588,32 +1529,10 @@ footer {
     }
     
     .nav-menu.active {
-        right: 0; /* Se desliza hacia adentro */
+        right: 0;
     }
     
-    .nav-menu li {
-        margin: 15px 0;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-menu li a {
-        font-size: 1.2rem;
-        padding: 12px 20px;
-        display: block;
-        width: 100%;
-        color: #ffffff;
-        font-weight: 600;
-        text-decoration: none;
-    }
-    
-    .nav-menu li a:hover {
-        background-color: #ffffff;
-        color: #003366;
-        text-decoration: none;
-    }
-    
-    /* Overlay oscuro cuando el menú está abierto */
+    /* Overlay oscuro */
     .menu-overlay {
         position: fixed;
         top: 70px;
@@ -1630,5 +1549,80 @@ footer {
     .menu-overlay.active {
         opacity: 1;
         visibility: visible;
+    }
+}
+
+/* ===== SECCIÓN SOBRE MÍ - RESPONSIVE ===== */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 0 0 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image .profile-photo {
+    width: 220px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #003366;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .about-image {
+        flex: 0 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-image .profile-photo {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .about-text {
+        width: 100%;
+        padding: 0 15px;
+        text-align: justify;
+    }
+    
+    .about-text p {
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image .profile-photo {
+        width: 160px;
+        height: 240px;
+    }
+    
+    .about-text {
+        padding: 0 10px;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem;
     }
 }
