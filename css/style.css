@@ -20,7 +20,7 @@ body {
 
 /* Navegación */
 .navbar {
-    background-color: #fff;
+    background-color: #003366;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -38,7 +38,7 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #003366; /* Azul marino */
+    color: #fff; /* Azul marino */
 }
 
 .nav-menu {
@@ -48,13 +48,13 @@ body {
 
 .nav-menu li a {
     text-decoration: none;
-    color: #636363;
+    color: #ffffff83;
     padding: 10px 15px;
     transition: color 0.3s;
 }
 
 .nav-menu li a:hover {
-    color: #004f9e; /* Azul marino */
+    color: #ffffff; /* Azul marino */
     text-decoration: underline;
 }
 
