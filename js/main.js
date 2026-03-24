@@ -103,8 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ===== MENÚ HAMBURGUESA =====
+// ===== MENÚ HAMBURGUESA Y SCROLL SUAVE (TODO EN UNO) =====
 document.addEventListener('DOMContentLoaded', function() {
+    // Elementos del menú
     const menuToggle = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
     
@@ -139,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Menú abierto');
     }
     
+    // Toggle del menú
     menuToggle.addEventListener('click', function(e) {
         e.stopPropagation();
         console.log('Click hamburguesa');
@@ -149,8 +151,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Cerrar al hacer clic en enlaces
-    navMenu.querySelectorAll('a').forEach(link => {
+    // Cerrar al hacer clic en enlaces del menú
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             closeMenu();
             const targetId = this.getAttribute('href');
@@ -164,8 +167,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Cerrar al hacer clic en overlay
     overlay.addEventListener('click', closeMenu);
     
+    // Cerrar al redimensionar a desktop
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
             closeMenu();
@@ -173,8 +178,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ===== SCROLL SUAVE =====
-document.querySelectorAll('.nav-menu a, .nav-brand a').forEach(anchor => {
+// ===== SCROLL SUAVE PARA EL RESTO DE ENLACES (no duplicado) =====
+// Nota: Los enlaces del menú ya tienen scroll suave arriba.
+// Esto solo cubre otros enlaces como el logo si tuviera href="#"
+document.querySelectorAll('.nav-brand a, .cv-button').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
         if (targetId && targetId.startsWith('#')) {
