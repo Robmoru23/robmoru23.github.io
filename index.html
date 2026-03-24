@@ -21,7 +21,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">Roberto Morollón</div>
-            
+
             <!-- Botón hamburguesa (solo visible en móvil) -->
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -35,10 +35,16 @@
                 <li><a href="#publicaciones">Publicaciones</a></li>
                 <li><a href="#investigacion">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
-
+            <!-- Botón de idioma como parte del menú -->
+            <li class="lang-menu-item">
+                <button id="lang-toggle" class="lang-toggle-btn">
+                    <img src="assets/icons/spain-flag.png" alt="Español" id="lang-flag" class="lang-flag">
+                    <span id="lang-text">ES</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
     <!-- Sección Inicio -->
     <section id="inicio" class="hero">
         <div class="hero-background">
@@ -1091,6 +1097,7 @@
         </div>
     </footer>
 
+    <script src="js/languages.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

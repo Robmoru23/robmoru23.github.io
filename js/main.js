@@ -20,7 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const visibleLinks = Array.from(conferenceLinks).filter(link => {
                 return link.style.display !== 'none';
             });
+            const t = translations[currentLang];
             visibleCountSpan.textContent = visibleLinks.length;
+            // Actualizar el texto del contador completo
+            const counterDiv = document.querySelector('.conference-counter');
+            if (counterDiv && t) {
+                counterDiv.innerHTML = `${t.conferences.counter} <span id="visible-count">${visibleLinks.length}</span> ${t.conferences.of} <span id="total-count">${conferenceLinks.length}</span> ${t.conferences.communications}`;
+            }
         }
     }
     
