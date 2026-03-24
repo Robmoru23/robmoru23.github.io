@@ -123,22 +123,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ===== MENÚ HAMBURGUESA =====
+// ===== MENÚ HAMBURGUESA - VERSIÓN CORREGIDA =====
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
     
-    // Crear overlay oscuro
-    const overlay = document.createElement('div');
-    overlay.className = 'menu-overlay';
-    document.body.appendChild(overlay);
+    // Verificar que los elementos existen
+    if (!menuToggle || !navMenu) {
+        console.error('❌ Error: No se encontraron elementos del menú hamburguesa');
+        console.log('menuToggle:', menuToggle);
+        console.log('navMenu:', navMenu);
+        return;
+    }
+    
+    console.log('✅ Elementos del menú encontrados');
+    
+    // Crear overlay oscuro si no existe
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+        console.log('✅ Overlay creado');
+    }
     
     // Función para cerrar el menú
     function closeMenu() {
         menuToggle.classList.remove('active');
         navMenu.classList.remove('active');
         overlay.classList.remove('active');
-        document.body.style.overflow = ''; // Restaurar scroll
+        document.body.style.overflow = '';
+        console.log('Menú cerrado');
     }
     
     // Función para abrir el menú
@@ -146,12 +161,16 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.classList.add('active');
         navMenu.classList.add('active');
         overlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Evitar scroll del body
+        document.body.style.overflow = 'hidden';
+        console.log('Menú abierto');
     }
     
     // Toggle del menú al hacer clic en hamburguesa
     menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
         e.stopPropagation();
+        console.log('Click en hamburguesa');
+        
         if (navMenu.classList.contains('active')) {
             closeMenu();
         } else {
@@ -163,9 +182,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            console.log('Click en enlace:', this.getAttribute('href'));
+            
+            // Cerrar menú
             closeMenu();
             
-            // Scroll suave al hacer clic
+            // Scroll suave
             const targetId = this.getAttribute('href');
             if (targetId && targetId.startsWith('#')) {
                 e.preventDefault();
@@ -181,7 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Cerrar menú al hacer clic en el overlay
-    overlay.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', function(e) {
+        console.log('Click en overlay');
+        closeMenu();
+    });
     
     // Cerrar menú al redimensionar a desktop
     window.addEventListener('resize', function() {
@@ -194,6 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
     navMenu.addEventListener('click', function(e) {
         e.stopPropagation();
     });
+    
+    console.log('✅ Menú hamburguesa inicializado correctamente');
 });
 
 // ===== SCROLL SUAVE PARA TODOS LOS ENLACES DEL MENÚ =====
