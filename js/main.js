@@ -122,3 +122,93 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(summarySection);
     }
 });
+
+// ===== MENÚ HAMBURGUESA =====
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    // Crear overlay oscuro
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Función para cerrar el menú
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restaurar scroll
+    }
+    
+    // Función para abrir el menú
+    function openMenu() {
+        menuToggle.classList.add('active');
+        navMenu.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Evitar scroll del body
+    }
+    
+    // Toggle del menú al hacer clic en hamburguesa
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (navMenu.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            closeMenu();
+            
+            // Scroll suave al hacer clic
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+    
+    // Cerrar menú al hacer clic en el overlay
+    overlay.addEventListener('click', closeMenu);
+    
+    // Cerrar menú al redimensionar a desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+    
+    // Prevenir que el clic dentro del menú cierre el overlay
+    navMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
+
+// ===== SCROLL SUAVE PARA TODOS LOS ENLACES DEL MENÚ =====
+document.querySelectorAll('.nav-menu a, .nav-brand a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
