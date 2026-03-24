@@ -277,11 +277,11 @@ function updateLanguageButton() {
     
     if (langBtn) {
         if (currentLang === 'es') {
-            langFlag.src = 'assets/icons/spain-flag.png';
+            langFlag.src = 'assets/icons/spain_flag.png';
             langFlag.alt = 'Español';
             langText.textContent = 'ES';
         } else {
-            langFlag.src = 'assets/icons/uk-flag.png';
+            langFlag.src = 'assets/icons/uk_flag.png';
             langFlag.alt = 'English';
             langText.textContent = 'EN';
         }
