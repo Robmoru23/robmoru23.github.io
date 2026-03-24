@@ -1452,7 +1452,7 @@ footer {
 }
 
 /* Responsive: mostrar hamburguesa en móvil */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .menu-toggle {
         display: flex;
     }
