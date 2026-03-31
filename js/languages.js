@@ -38,7 +38,7 @@ const translations = {
             },
             neuroscience: {
                 title: "Neurociencias",
-                items: ["Neurobiología", "Neurociencias", "Neuroimagen", "Neuroinformática", "Neuropsicología", "Neurorehabilitación", "Ciencias cognitivas", "Ciencias psicológicas", "Comportamiento", "Ciencias visuales"]
+                items: ["Neurobiología", "Neurociencias", "Neuroimagen", "Neuropsicología", "Neurorehabilitación", "Ciencias cognitivas", "Comportamiento"]
             },
             engineering: {
                 title: "Ingeniería",
@@ -52,9 +52,8 @@ const translations = {
             programming: "Programación & Análisis de Datos",
             experimental: "Técnicas Experimentales",
             tools: "Herramientas & Desarrollo",
-            environments3d: "Entornos 3D y Simulación",
             devices: "Dispositivos y Hardware",
-            softSkills: "Soft Skills",
+            softSkills: "Habilidades Transversales",
             languages: "Idiomas"
         },
         // Publicaciones
@@ -80,7 +79,7 @@ const translations = {
         projects: {
             title: "Proyectos de Investigación",
             unpublishedTitle: "Proyectos no publicados",
-            fundedTitle: "Proyectos con Financiación Competitiva",
+            fundedTitle: "Participación en Proyectos con Financiación Competitiva",
             phd: {
                 title: "Evaluación del Comportamiento en Prótesis Visuales Corticales",
                 role: "Tesis Doctoral - Doctorado en Bioingeniería - UMH",
@@ -214,7 +213,6 @@ const translations = {
             programming: "Programming & Data Analysis",
             experimental: "Experimental Techniques",
             tools: "Tools & Development",
-            environments3d: "3D Environments & Simulation",
             devices: "Devices & Hardware",
             softSkills: "Soft Skills",
             languages: "Languages"
@@ -242,7 +240,7 @@ const translations = {
         projects: {
             title: "Research Projects",
             unpublishedTitle: "Unpublished Projects",
-            fundedTitle: "Competitively Funded Projects",
+            fundedTitle: "Competitively Funded Projects Participation",
             phd: {
                 title: "Behavioral Assessment in Cortical Visual Prostheses",
                 role: "PhD Thesis - PhD in Bioengineering - UMH",
@@ -448,8 +446,7 @@ function _updateSkills(t) {
         { icon: '💻', key: 'programming' },
         { icon: '🔬', key: 'experimental' },
         { icon: '🛠️', key: 'tools' },
-        { icon: '🎮', key: 'environments3d' },
-        { icon: '🔧', key: 'devices' },
+        { icon: '🎮', key: 'devices' },
         { icon: '🤝', key: 'softSkills' },
         { icon: '🌐', key: 'languages' }
     ];

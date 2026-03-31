@@ -28,6 +28,8 @@
     </style>
 </head>
 <body>
+    <div id="scroll-progress"></div>
+    <button id="back-to-top" title="Volver arriba">&#8593;</button>
     <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="container">
@@ -98,6 +100,24 @@
             <div class="about-content">
                 <div class="about-image">
                     <img src="assets/images/profile-photo.png" loading="lazy" alt="Foto de perfil" class="profile-photo">
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">4+</span>
+                            <span class="about-stat-label">Años investigando</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">3</span>
+                            <span class="about-stat-label">Publicaciones</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">13</span>
+                            <span class="about-stat-label">Congresos</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">7</span>
+                            <span class="about-stat-label">TFMs dirigidos</span>
+                        </div>
+                    </div>
                 </div>                
                 <div class="about-text">
                     <p>Doctor en Bioingeniería con formación interdisciplinar en biología, neurociencias, robótica y visión artificial, estudiando el comportamiento y la percepción visual durante la estimulación cerebral. Realidad virtual, modelos 3D y arquitecturas deep learning en sistemas autónomos, con aplicaciones en tecnología y salud. Cuatro años de experiencia contratada en investigación, con financiación competitiva y publicaciones en el campo de prótesis visuales corticales. Busco incorporarme a proyectos de I+D en el sector académico o empresarial, tecnológico o biomédico en Alicante.</p>
@@ -138,14 +158,11 @@
                         <li>Neurobiología</li>
                         <li>Neurociencias</li>
                         <li>Neuroimagen</li>
-                        <li>Neuroinformática</li>
                         <li>Neuropsicología</li>
                         <li>Neurorehabilitación</li>
                         <li>Ciencias cognitivas</li>
-                        <li>Ciencias psicológicas</li>
                         <li>Comportamiento</li>
-                        <li>Ciencias visuales</li>
-                    </ul>
+                     </ul>
                 </div>        
 
                 <!-- Tarjeta 3: Ingeniería y Tecnología -->
@@ -188,20 +205,60 @@
                     </div>
                     <div class="skill-tags">
                         <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>                        
+                        <span>OpenCV</span>
                         <span>SciPy</span>
                         <span>Pandas</span>
-                        <span>Matplotlib</span>
-                        <span>TensorFlow</span>
                         <span>Scikit-learn</span>
+                        <span>TensorFlow</span>
                         <span>Keras</span>
-                        <span>OpenCV</span>
+                        <span>GUIs</span>
                         <span>Tkinter</span>
                         <span>PyQt</span>
                         <span>PyGame</span>
                     </div>
                 </div>
                 
-                <!-- Skill 2: MATLAB -->
+                <!-- Skill 2: C++ -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">C++</span>
+                        <span class="skill-level">Medio</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Arduino</span>
+                        <span>Programación orientada a objetos</span>
+                        <span>Algoritmos</span>
+                        <span>Estructuras de datos</span>
+                        <span>Optimización</span>
+                        <span>Desarrollo de software</span>
+                    </div>
+                </div>
+                
+                <!-- Skill 3: Bash / Linux -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Bash / Linux</span>
+                        <span class="skill-level">Básico</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 35%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Scripting</span>
+                        <span>Terminal</span>
+                        <span>HPC</span>
+                        <span>Procesamiento por lotes</span>
+                        <span>Automatización</span>
+                        <span>ROS</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3: MATLAB -->
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">MATLAB</span>
@@ -214,27 +271,7 @@
                         <span>Signal Processing</span>
                         <span>Image Processing</span>
                         <span>Statistics</span>
-                        <span>Neural Networks</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 3: Bash / Linux -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Bash / Linux</span>
-                        <span class="skill-level">Intermedio</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Scripting</span>
-                        <span>Terminal</span>
-                        <span>HPC</span>
-                        <span>Procesamiento por lotes</span>
-                        <span>Automatización</span>
-                        <span>ROS</span>
-
+                        <span>Data Visualization</span>
                     </div>
                 </div>
 
@@ -256,24 +293,6 @@
                         <span>shiny</span>
                     </div>
                 </div>
-                
-                <!-- Skill 5: C++ -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">C++</span>
-                        <span class="skill-level">Medio</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 50%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Programación orientada a objetos</span>
-                        <span>Algoritmos</span>
-                        <span>Estructuras de datos</span>
-                        <span>Optimización</span>
-                        <span>Desarrollo de software</span>
-                    </div>
-                </div>
 
                 <!-- Skill 6: SPSS -->
                 <div class="skill-card">
@@ -282,18 +301,23 @@
                         <span class="skill-level">Básico</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 30%"></div>
+                        <div class="progress-fill" style="width: 35%"></div>
                     </div>
                     <div class="skill-tags">
-                        <span>Analisis de datos</span>
-                        <span>Estadística</span>
-                        <span>Modelado estadístico</span>
-                        <span>Visualización de datos</span>
                         <span>ANOVA</span>
+                        <span>t-tests</span>
+                        <span>Chi-square</span>
+                        <span>Kruskal-Wallis</span>
+                        <span>Mann-Whitney</span>
+                        <span>Friedman</span>
+                        <span>Wilcoxon</span>
+                        <span>R2</span>
                         <span>Regresión lineal</span>
+                        <span>Regresión logística</span>
+                        <span>Series temporales</span>
+                        <span>Correlación</span>
                     </div>
                 </div>
-
             </div>
         </div>
         
@@ -303,8 +327,61 @@
                 <span class="category-icon">🔬</span> Técnicas Experimentales
             </h3>
             <div class="skills-grid">
-                
-                <!-- Skill 1: Análisis de Comportamiento -->
+
+                <!-- Skill 1: Electrofisiología -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Electrofisiología</span>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Registro neuronal</span>
+                        <span>Estimulación</span>
+                        <span>Intracortical</span>
+                        <span>Spike sorting</span>
+                        <span>LFP</span>
+                        <span>MEAs</span>
+                        <span>Neuroprosthetics</span>
+                    </div>
+                </div>   
+
+                <!-- Skill 2: EEG -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Electroencefalografía (EEG)</span>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Visual Evoked Potential</span>
+                        <span>Conectividad</span>
+                        <span>Coherencia</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3: sEMG -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Electromiografía (sEMG)</span>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Patrones musculares</span>
+                        <span>Tiempo de respuesta</span>
+                        <span>Procesamiento de señales</span>
+                        <span>Clasificación</span>
+                    </div>
+                </div>
+
+                <!-- Skill 5: Análisis de Comportamiento -->
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">Comportamiento</span>
@@ -319,81 +396,10 @@
                         <span>Hand-tracking</span>
                         <span>Etología cuantitativa</span>
                         <span>Encuestas</span>
-                        <span>Análisis temporal</span>
-                        <span>DeepLabCut</span>
-                        <span>EthoVision</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 1: Electrofisiología -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Electrofisiología</span>
-                        <span class="skill-level">Avanzado</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Registro y Estimulación Intracortical</span>
-                        <span>Spike sorting</span>
-                        <span>LFP</span>
-                        <span>MEAs</span>
                     </div>
                 </div>
 
-                <!-- Skill: EEG -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Electroencefalografía (EEG)</span>
-                        <span class="skill-level">Intermedio</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 65%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Visual Evoked Potential</span>
-                        <span>Conectividad</span>
-                        <span>Coherencia</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 2: Neuroimagen -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Neuroimagen</span>
-                        <span class="skill-level">Intermedio</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 65%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>fMRI</span>
-                        <span>MRI</span>
-                        <span>Preprocesamiento</span>
-                        <span>Análisis estadístico</span>
-                    </div>
-                </div>
-                                
-                <!-- Skill 4: sEMG -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Electromiografía (sEMG)</span>
-                        <span class="skill-level">Avanzado</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Patrones musculares</span>
-                        <span>Tiempo de respuesta</span>
-                        <span>Procesamiento de señales</span>
-                        <span>Clasificación</span>
-                        <span>Deep Learning</span>
-                    </div>
-                </div>
-
-                <!-- Skill: Realidad Virtual -->
+                <!-- Skill 6: Realidad Virtual -->
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">Realidad Virtual</span>
@@ -433,7 +439,65 @@
                 <span class="category-icon">🛠️</span> Herramientas y Desarrollo
             </h3>
             <div class="skills-grid">
-                <!-- Skill 1: Git / GitHub -->
+                
+                <!-- Skill 1: MS Office -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">MS Office</span>
+                        <span class="skill-level">Experto</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Word</span>
+                        <span>Excel</span>
+                        <span>PowerPoint</span>
+                    </div>
+                </div>
+
+                <!-- Skill 2: Inteligencia Artificial -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Inteligencia Artificial</span>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>LSTM</span>
+                        <span>YOLOvX</span>
+                        <span>MIDAS</span>
+                        <span>DeepLabCut</span>
+                        <span>ChatGPT</span>
+                        <span>DeepSeek</span>
+                        <span>CNN</span>
+                        <span>Openpose</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3: ENTORNOS 3D -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Entornos 3D</span>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Unreal Engine</span>
+                        <span>Unity</span>
+                        <span>Sketchup</span>
+                        <span>Blender</span>
+                        <span>Inventor</span>
+                        <span>Entornos Virtuales</span>
+                        <span>Simulación Visual</span>
+                    </div>
+                </div>
+
+                <!-- Skill 4: Git / GitHub -->
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">Git / GitHub</span>
@@ -452,7 +516,7 @@
                     </div>
                 </div>
                 
-                <!-- Skill 2: LaTeX -->
+                <!-- Skill 5: LaTeX -->
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">LaTeX</span>
@@ -467,44 +531,6 @@
                         <span>Presentaciones</span>
                         <span>BibTeX</span>
                         <span>Overleaf</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 3: MS Office -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">MS Office</span>
-                        <span class="skill-level">Experto</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 95%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Excel</span>
-                        <span>PowerPoint</span>
-                        <span>Word</span>
-                        <span>Análisis de datos</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 5: Inteligencia Artificial -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Inteligencia Artificial</span>
-                        <span class="skill-level">Avanzado</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>LSTM</span>
-                        <span>YOLOvX</span>
-                        <span>MIDAS</span>
-                        <span>DeepLabCut</span>
-                        <span>ChatGPT</span>
-                        <span>DeepSeek</span>
-                        <span>CNN</span>
-                        <span>Openpose</span>
                     </div>
                 </div>
 
@@ -527,50 +553,29 @@
             </div>
         </div>
 
-        <!-- ===== CATEGORÍA 4: ENTORNOS 3D ===== -->
-        <div class="skill-category">
-            <h3 class="category-title">
-                <span class="category-icon">🎮</span> Entornos 3D y Simulación
-            </h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Unreal Engine</span>
-                        <span class="skill-level">Avanzado</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Entornos Virtuales</span>
-                        <span>Simulación Visual</span>
-                        <span>Fosfenos</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Modelado 3D</span>
-                        <span class="skill-level">Intermedio</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 55%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Unity</span>
-                        <span>Blender</span>
-                        <span>Sketchup</span>
-                        <span>Inventor</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- ===== CATEGORÍA 5: DISPOSITIVOS ===== -->
         <div class="skill-category">
             <h3 class="category-title">
-                <span class="category-icon">🔧</span> Dispositivos y Hardware
+                <span class="category-icon">🎮</span> Dispositivos y Hardware
             </h3>
             <div class="skills-grid">
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Registro Electrofisiológico</span>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Trellis</span>
+                        <span>OpenBCI</span>
+                        <span>Myo Armband</span>
+                        <span>Empatica E4</span>
+                    </div>
+                </div>
+                
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">Realidad Virtual (HW)</span>
@@ -586,20 +591,7 @@
                         <span>PICO</span>
                     </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Registro Electrofisiológico</span>
-                        <span class="skill-level">Avanzado</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Myo Armband</span>
-                        <span>OpenBCI</span>
-                        <span>Trellis</span>
-                    </div>
-                </div>
+
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">Cámaras y Visión</span>
@@ -613,6 +605,7 @@
                         <span>Camera Reolink</span>
                     </div>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">Eye-Tracking</span>
@@ -638,9 +631,10 @@
                         <span>Arduino</span>
                         <span>Jetson TX2</span>
                         <span>Jetson Nano</span>
-                        <span>PLD</span>
+                        <span>PLC</span>
                     </div>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-header">
                         <span class="skill-name">Robótica</span>
@@ -652,6 +646,7 @@
                     <div class="skill-tags">
                         <span>Robot Pepper</span>
                         <span>Robot Nano</span>
+                        <span>Roomba</span>
                         <span>ROS</span>
                     </div>
                 </div>
@@ -661,7 +656,7 @@
         <!-- Soft Skills (opcional, pero recomendable) -->
         <div class="skill-category">
             <h3 class="category-title">
-                <span class="category-icon">🤝</span> Soft Skills
+                <span class="category-icon">🤝</span> Habilidades Transversales
             </h3>
             <div class="soft-skills-grid">
                 <div class="soft-skill-item">Comunicación Científica</div>
@@ -689,7 +684,7 @@
                 </div>
                 <div class="language-item">
                     <span class="language-name">Inglés</span>
-                    <span class="language-level">C1 - Avanzado (Científico)</span>
+                    <span class="language-level">C1 - Avanzado -Científico</span>
                 </div>
                 <div class="language-item">
                     <span class="language-name">Valenciano</span>
@@ -727,11 +722,7 @@
                 <div class="project-card">
                     <h3>Enhancing Orientation and Mobility Assessments: Integrating Visual and Auditory Factors Using Artificial Intelligence Tools</h3>
                     <p class="project-role"><strong>2025</strong> - Roberto Morollón Ruiz, Joel Alejandro Cueva Garcés, Leili Soo, Eduardo Fernández</p>
-                    <p class="project-desc">Propose: Common orientation and mobility (O&M) assessments in individuals with visual impairments often overlook environmental and psychological factors, and report results in outcome measures that might not be sufficiently sensitive. The present study aims to extend previous assessments by comparing the O&M performance and arousal levels in different simulated vision impairment and auditory conditions while using artificial intelligence (AI) tools for body tracking in an O&M task within a StreetLab environment.</p>
-                    <p class="project-desc">Methods: We video-recorded the O&M performance in 32 volunteers under different auditory and visual conditions. In addition to common outcome metrics (speed and collisions), we measured path length and deviations based on AI tools. Physiological parameters and subjective experiences were also recorded.</p>
-                    <p class="project-desc">Results: Our results showed differences between various conditions when measured using AI-based path length and deviations that were not detected by common outcome measures. We found that both vision and auditory conditions influenced O&M performance and that performing the task with a lot of background sound increased arousal.</p>
-                    <p class="project-desc">Conclusions: Overall, the study shows that AI-based analysis can offer valuable insights into performance beyond traditional measures and that a comprehensive evaluation of O&M skills in visual impairment should include considerations for both visual and auditory factors as well as arousal level.</p>
-
+                    <p class="project-desc">Propose: Common orientation and mobility (O&M) assessments in individuals with visual impairments often overlook environmental and psychological factors, and report results in outcome measures that might not be sufficiently sensitive. The present study aims to extend previous assessments by comparing the O&M performance and arousal levels in different simulated vision impairment and auditory conditions while using artificial intelligence (AI) tools for body tracking in an O&M task within a StreetLab environment. Methods: We video-recorded the O&M performance in 32 volunteers under different auditory and visual conditions. In addition to common outcome metrics (speed and collisions), we measured path length and deviations based on AI tools. Physiological parameters and subjective experiences were also recorded. Results: Our results showed differences between various conditions when measured using AI-based path length and deviations that were not detected by common outcome measures. We found that both vision and auditory conditions influenced O&M performance and that performing the task with a lot of background sound increased arousal. Conclusions: Overall, the study shows that AI-based analysis can offer valuable insights into performance beyond traditional measures and that a comprehensive evaluation of O&M skills in visual impairment should include considerations for both visual and auditory factors as well as arousal level.</p>
                     <p class="project-institution">Translational Vision Science & Technology - The Association for Research in Vision and Ophthalmology</p>
                 </div>
             </a>
@@ -745,8 +736,6 @@
                 </div>
             </a>
 
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1076,7 +1065,7 @@
                 </div>
             </div>
 
-            <h3 class="subsection-title">Proyectos con Financiación Competitiva</h3>
+            <h3 class="subsection-title">Participación en Proyectos con Financiación Competitiva</h3>
 
             <div class="project-card">
                 <h3>Desarrollo de una nueva generación de prótesis visuales intracorticales</h3>
@@ -1309,7 +1298,7 @@
                 
                 <div class="contact-email">
                     <p>Puedes contactarme directamente en:</p>
-                    <a href="mailto:robmoru23@gmail.com" class="email-link"><span >robmoru23@gmail.com</span></a>
+                    <a href="mailto:robmoru23@gmail.com" class="email-link">robmoru23@gmail.com</a>
                 </div>
 
                 <div class="contact-links">
@@ -1346,15 +1335,23 @@
         </div>
     </section>
 
-        <footer>
+    <footer>
         <div class="container">
-            <p>&copy; 2026 Roberto Morollón. Todos los derechos reservados.</p>
+            <div class="footer-inner">
+                <span class="footer-name">Roberto Morollón Ruiz</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/roberto-moroll%C3%B3n-ruiz-14650b13a/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Robmoru23" target="_blank">GitHub</a>
+                    <a href="https://scholar.google.es/citations?user=SVMv6VEAAAAJ" target="_blank">Google Scholar</a>
+                    <a href="https://orcid.org/0000-0002-9903-3296" target="_blank">ORCID</a>
+                    <a href="https://robmoru23.github.io/" target="_blank">robmoru23.github.io</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Roberto Morollón. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/languages.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 </html>
