@@ -23,7 +23,7 @@ const translations = {
         // Sobre Mí
         about: {
             title: "Sobre Mí",
-            text1: "Doctor en Bioingeniería con formación interdisciplinar en neurociencia, robótica y visión artificial. Cuatro años de experiencia contratada en investigación, con financiación competitiva y publicaciones en el campo de prótesis visuales corticales. Busco incorporarme a proyectos de I+D en el sector académico o empresarial, aportando un perfil híbrido que combina conocimiento biológico con herramientas de deep learning, visión por computadora y robótica.",
+            text1: "Doctor en Bioingeniería con formación interdisciplinar en biología, neurociencias, robótica y visión artificial, estudiando el comportamiento y la percepción visual durante la estimulación cerebral. Realidad virtual, modelos 3D y arquitecturas deep learning en sistemas autónomos, con aplicaciones en tecnología y salud. Cuatro años de experiencia contratada en investigación, con financiación competitiva y publicaciones en el campo de prótesis visuales corticales. Busco incorporarme a proyectos de I+D en el sector académico o empresarial, tecnológico o biomédico en Alicante.",
             text2: "Apasionado por la intersección entre biología, neurociencia, robótica y comportamiento, desarrollo soluciones que conectan la tecnología con el potencial humano para restaurar capacidades sensoriales perdidas.",
             text3: "Durante los últimos años, en el Laboratorio de Neuroprótesis Visuales de la Universidad Miguel Hernández, he desarrollado el análisis comportamental para prótesis visuales corticales, explorando cómo la neurociencia y la ingeniería pueden converger para restaurar la percepción visual en personas ciegas.",
             text4: "Mi investigación combina análisis de datos (Python, MATLAB, C++), neuroimagen, electrofisiología, modelos computacionales y deep learning. Colaboro activamente en equipos multidisciplinares, presentando regularmente mis hallazgos en conferencias internacionales."
@@ -31,18 +31,18 @@ const translations = {
         // Campos de Investigación
         researchFields: {
             title: "Campos de Investigación",
-            subtitle: "Intersección de disciplinas para la innovación - Un enfoque multidisciplinar integrador",
+            subtitle: "Intersección de disciplinas para la innovación - Convergencia de saberes - Un enfoque multidisciplinar integrador",
             biology: {
                 title: "Biología",
-                items: ["Ciencias de la vida", "Ciencias de la salud", "Biofísica", "Biología celular", "Óptica", "Electrofisiología"]
+                items: ["Biología", "Ciencias biológicas", "Biofísica", "Biotecnología", "Óptica", "Ciencias médicas", "Rehabilitación"]
             },
             neuroscience: {
                 title: "Neurociencias",
-                items: ["Neurobiología", "Cognición", "Percepción", "Psicología", "Neuropsicología", "Comportamiento"]
+                items: ["Neurobiología", "Neurociencias", "Neuroimagen", "Neuroinformática", "Neuropsicología", "Neurorehabilitación", "Ciencias cognitivas", "Ciencias psicológicas", "Comportamiento", "Ciencias visuales"]
             },
             engineering: {
                 title: "Ingeniería",
-                items: ["Bioingeniería", "Robótica", "Cibernética", "Realidad Virtual", "Inteligencia artificial", "Visión artificial"]
+                items: ["Bioingeniería", "Ingeniería informática", "Ciencias informáticas", "Cibernética", "Realidad Virtual", "Inteligencia artificial", "Visión artificial"]
             }
         },
         // Habilidades Técnicas
@@ -52,6 +52,8 @@ const translations = {
             programming: "Programación & Análisis de Datos",
             experimental: "Técnicas Experimentales",
             tools: "Herramientas & Desarrollo",
+            environments3d: "Entornos 3D y Simulación",
+            devices: "Dispositivos y Hardware",
             softSkills: "Soft Skills",
             languages: "Idiomas"
         },
@@ -77,14 +79,16 @@ const translations = {
         // Proyectos
         projects: {
             title: "Proyectos de Investigación",
+            unpublishedTitle: "Proyectos no publicados",
+            fundedTitle: "Proyectos con Financiación Competitiva",
             phd: {
                 title: "Evaluación del Comportamiento en Prótesis Visuales Corticales",
                 role: "Tesis Doctoral - Doctorado en Bioingeniería - UMH",
-                desc: "Desarrollo de protocolos comportamentales y algoritmos de análisis para evaluar la percepción visual inducida por estimulación intracortical en modelos animales. Integración de datos electrophysiológicos y de comportamiento para optimizar estrategias de estimulación.",
+                desc: "Desarrollo de protocolos comportamentales y algoritmos de análisis para evaluar la percepción visual inducida por estimulación intracortical. Integración de datos electrofisiológicos y de comportamiento para optimizar estrategias de estimulación.",
                 institution: "Biomedical Neuroengineering Group · Instituto de Bioingeniería · Universidad Miguel Hernández (2020 - 2026)"
             },
             semg: {
-                title: "Reconocimiento de patrones musculares con el sensor sEMG de bajo coste Myo y Deep Learning",
+                title: "Reconocimiento de patrones musculares con el sensor sEMG y Deep Learning",
                 role: "TFM - Máster en Robótica - UA",
                 desc: "Implementación de redes neuronales profundas (Deep Learning) para clasificar patrones de activación muscular mediante sensores de electromiografía superficial (sEMG), con aplicaciones en control de prótesis robóticas.",
                 institution: "RoViT Lab · Escuela Politécnica Superior · Universidad de Alicante (2020)"
@@ -100,6 +104,39 @@ const translations = {
                 role: "TFG - Grado en Biología - UA",
                 desc: "Investigación de las dinámicas sociales y las estructuras jerárquicas en una población de dos especies de tiburones.",
                 institution: "Zoo Aquarium de Madrid · Universidad Complutense de Madrid · Universidad de Alicante (2017)"
+            },
+            // Proyectos no publicados
+            kinect: {
+                title: "Desarrollo de software de registro, almacenamiento y análisis de datos biomecánicos con Azure Kinect",
+                desc: "Desarrollo de una herramienta completa para la captura, almacenamiento y análisis de datos de movimiento corporal usando la cámara de profundidad Azure Kinect."
+            },
+            unrealVR: {
+                title: "Desarrollo de entornos virtuales en Realidad Virtual con Unreal Engine",
+                desc: "Creación de entornos inmersivos de realidad virtual para la evaluación y rehabilitación de personas con discapacidad visual, incluyendo simulación de patologías y fosfenos."
+            },
+            sync: {
+                title: "Sincronización de body-tracking entre Azure Kinect y Unreal Engine",
+                desc: "Integración en tiempo real de datos de seguimiento corporal del sensor Azure Kinect dentro de entornos virtuales de Unreal Engine."
+            },
+            arSimulator: {
+                title: "Desarrollo de un simulador de patologías visuales y fosfenos portátil en Realidad Aumentada",
+                desc: "Prototipo de dispositivo portátil para la simulación de diversas patologías visuales y la visualización de fosfenos, como herramienta de evaluación y divulgación."
+            },
+            // Proyectos con financiación
+            nextgen: {
+                title: "Desarrollo de una nueva generación de prótesis visuales intracorticales",
+                role: "I+D+i Retos de la Sociedad - Ministerio de Ciencia e Innovación · IP: Eduardo Fernández · 2019–2022",
+                desc: "Investigación orientada al desarrollo de nuevas estrategias de estimulación y dispositivos de próxima generación para prótesis visuales corticales."
+            },
+            prometeo: {
+                title: "Development and validation of a cortical visual neuroprosthesis for the blind",
+                role: "Proyecto PROMETEO - Generalitat Valenciana · IP: Eduardo Fernández · 2019–2021",
+                desc: "Proyecto de excelencia para el desarrollo y validación clínica de una neuroprótesis visual cortical en pacientes con ceguera profunda."
+            },
+            h2020: {
+                title: "Neural active visual prosthetics for restoring function",
+                role: "H2020 FET Open - European Commission · IP: Eduardo Fernández · 2019–2023",
+                desc: "Proyecto europeo de investigación de frontera para el desarrollo de prótesis visuales activas neurales orientadas a la restauración funcional de la visión."
             }
         },
         // TFMs
@@ -116,11 +153,7 @@ const translations = {
         // Contacto
         contact: {
             title: "Contacto",
-            name: "Nombre",
-            email: "Email",
-            message: "Mensaje",
-            send: "Enviar Mensaje",
-            emailDirect: "📧 También puedes contactarme directamente en:",
+            emailDirect: "Puedes contactarme directamente en:",
             emailNote: "Haz clic para abrir tu cliente de correo"
         },
         // Footer
@@ -128,6 +161,7 @@ const translations = {
             rights: "Todos los derechos reservados"
         }
     },
+
     en: {
         // Navigation
         nav: {
@@ -151,26 +185,26 @@ const translations = {
         // About
         about: {
             title: "About Me",
-            text1: "PhD in Bioengineering with interdisciplinary training in neuroscience, robotics, and computer vision. Four years of contracted research experience with competitive funding and publications in the field of cortical visual prostheses. Seeking to join R&D projects in academia or industry, bringing a hybrid profile that combines biological knowledge with deep learning, computer vision, and robotics tools.",
-            text2: "Passionate about the intersection of biology, neuroscience, robotics, and behavior, I develop solutions that connect technology with human potential to restore lost sensory capabilities.",
+            text1: "PhD in Bioengineering with interdisciplinary training in biology, neurosciences, robotics and computer vision, studying behavior and visual perception during brain stimulation. Virtual reality, 3D models and deep learning architectures in autonomous systems, with applications in technology and health. Four years of contracted research experience with competitive funding and publications in the field of cortical visual prostheses. Looking to join R&D projects in academia or industry, in the technological or biomedical sector in Alicante.",
+            text2: "Passionate about the intersection of biology, neuroscience, robotics and behavior, I develop solutions that connect technology with human potential to restore lost sensory capabilities.",
             text3: "In recent years, at the Visual Neuroprosthesis Laboratory of Miguel Hernández University, I have developed behavioral analysis for cortical visual prostheses, exploring how neuroscience and engineering can converge to restore visual perception in blind individuals.",
-            text4: "My research combines data analysis (Python, MATLAB, C++), neuroimaging, electrophysiology, computational models, and deep learning. I actively collaborate in multidisciplinary teams, regularly presenting my findings at international conferences."
+            text4: "My research combines data analysis (Python, MATLAB, C++), neuroimaging, electrophysiology, computational models and deep learning. I actively collaborate in multidisciplinary teams, regularly presenting my findings at international conferences."
         },
         // Research Fields
         researchFields: {
             title: "Research Fields",
-            subtitle: "Intersection of disciplines for innovation - A multidisciplinary integrative approach",
+            subtitle: "Intersection of disciplines for innovation - Convergence of knowledge - A multidisciplinary integrative approach",
             biology: {
                 title: "Biology",
-                items: ["Life Sciences", "Health Sciences", "Biophysics", "Cell Biology", "Optics", "Electrophysiology"]
+                items: ["Biology", "Biological Sciences", "Biophysics", "Biotechnology", "Optics", "Medical Sciences", "Rehabilitation"]
             },
             neuroscience: {
                 title: "Neurosciences",
-                items: ["Neurobiology", "Cognition", "Perception", "Psychology", "Neuropsychology", "Behavior"]
+                items: ["Neurobiology", "Neurosciences", "Neuroimaging", "Neuroinformatics", "Neuropsychology", "Neurorehabilitation", "Cognitive Sciences", "Psychological Sciences", "Behavior", "Visual Science"]
             },
             engineering: {
                 title: "Engineering",
-                items: ["Bioengineering", "Robotics", "Cybernetics", "Virtual Reality", "Artificial Intelligence", "Computer Vision"]
+                items: ["Bioengineering", "Computer Engineering", "Computer Sciences", "Cybernetics", "Virtual Reality", "Artificial Intelligence", "Computer Vision"]
             }
         },
         // Skills
@@ -180,6 +214,8 @@ const translations = {
             programming: "Programming & Data Analysis",
             experimental: "Experimental Techniques",
             tools: "Tools & Development",
+            environments3d: "3D Environments & Simulation",
+            devices: "Devices & Hardware",
             softSkills: "Soft Skills",
             languages: "Languages"
         },
@@ -205,14 +241,16 @@ const translations = {
         // Projects
         projects: {
             title: "Research Projects",
+            unpublishedTitle: "Unpublished Projects",
+            fundedTitle: "Competitively Funded Projects",
             phd: {
                 title: "Behavioral Assessment in Cortical Visual Prostheses",
                 role: "PhD Thesis - PhD in Bioengineering - UMH",
-                desc: "Development of behavioral protocols and analysis algorithms to evaluate visual perception induced by intracortical stimulation in animal models. Integration of electrophysiological and behavioral data to optimize stimulation strategies.",
+                desc: "Development of behavioral protocols and analysis algorithms to evaluate visual perception induced by intracortical stimulation. Integration of electrophysiological and behavioral data to optimize stimulation strategies.",
                 institution: "Biomedical Neuroengineering Group · Institute of Bioengineering · Miguel Hernández University (2020 - 2026)"
             },
             semg: {
-                title: "Muscle Pattern Recognition with Low-Cost sEMG Sensor Myo and Deep Learning",
+                title: "Muscle Pattern Recognition with sEMG Sensor and Deep Learning",
                 role: "Master's Thesis - Master in Robotics - UA",
                 desc: "Implementation of deep neural networks to classify muscle activation patterns using surface electromyography (sEMG) sensors, with applications in robotic prosthesis control.",
                 institution: "RoViT Lab · Polytechnic School · University of Alicante (2020)"
@@ -228,6 +266,39 @@ const translations = {
                 role: "Bachelor's Thesis - Biology Degree - UA",
                 desc: "Investigation of social dynamics and hierarchical structures in a population of two shark species in captivity.",
                 institution: "Madrid Zoo Aquarium · Complutense University of Madrid · University of Alicante (2017)"
+            },
+            // Unpublished projects
+            kinect: {
+                title: "Software Development for Recording, Storage and Analysis of Biomechanical Data with Azure Kinect",
+                desc: "Development of a complete tool for capturing, storing and analyzing body motion data using the Azure Kinect depth camera."
+            },
+            unrealVR: {
+                title: "Development of Virtual Environments in Virtual Reality with Unreal Engine",
+                desc: "Creation of immersive virtual reality environments for evaluation and rehabilitation of visually impaired individuals, including simulation of visual pathologies and phosphenes."
+            },
+            sync: {
+                title: "Body-tracking Synchronization between Azure Kinect and Unreal Engine",
+                desc: "Real-time integration of body tracking data from the Azure Kinect sensor into Unreal Engine virtual environments."
+            },
+            arSimulator: {
+                title: "Development of a Portable Visual Pathology and Phosphene Simulator in Augmented Reality",
+                desc: "Prototype of a portable device for simulating various visual pathologies and phosphene visualization, as an evaluation and outreach tool."
+            },
+            // Funded projects
+            nextgen: {
+                title: "Development of a New Generation of Intracortical Visual Prostheses",
+                role: "R&D Societal Challenges - Ministry of Science and Innovation · PI: Eduardo Fernández · 2019–2022",
+                desc: "Research aimed at developing new stimulation strategies and next-generation devices for cortical visual prostheses."
+            },
+            prometeo: {
+                title: "Development and Validation of a Cortical Visual Neuroprosthesis for the Blind",
+                role: "PROMETEO Project - Generalitat Valenciana · PI: Eduardo Fernández · 2019–2021",
+                desc: "Excellence project for the development and clinical validation of a cortical visual neuroprosthesis in patients with profound blindness."
+            },
+            h2020: {
+                title: "Neural Active Visual Prosthetics for Restoring Function",
+                role: "H2020 FET Open - European Commission · PI: Eduardo Fernández · 2019–2023",
+                desc: "European frontier research project for the development of active neural visual prostheses aimed at the functional restoration of vision."
             }
         },
         // TFMs
@@ -244,11 +315,7 @@ const translations = {
         // Contact
         contact: {
             title: "Contact",
-            name: "Name",
-            email: "Email",
-            message: "Message",
-            send: "Send Message",
-            emailDirect: "📧 You can also contact me directly at:",
+            emailDirect: "You can contact me directly at:",
             emailNote: "Click to open your email client"
         },
         // Footer
@@ -258,10 +325,30 @@ const translations = {
     }
 };
 
-// Idioma actual
+// ===== ESTADO =====
 let currentLang = 'es';
 
-// Función para cambiar el idioma
+// ===== UTILIDADES =====
+
+/** Aplica texto a un elemento si existe */
+function setText(selector, text) {
+    const el = document.querySelector(selector);
+    if (el) el.textContent = text;
+}
+
+/** Aplica HTML a un elemento si existe */
+function setHTML(selector, html) {
+    const el = document.querySelector(selector);
+    if (el) el.innerHTML = html;
+}
+
+/** Aplica texto a un elemento de un NodeList si existe */
+function setNodeText(nodes, index, text) {
+    if (nodes[index]) nodes[index].textContent = text;
+}
+
+// ===== CAMBIO DE IDIOMA =====
+
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('language', lang);
@@ -269,214 +356,207 @@ function setLanguage(lang) {
     updateLanguageButton();
 }
 
-// Función para actualizar el botón de idioma
+function toggleLanguage() {
+    setLanguage(currentLang === 'es' ? 'en' : 'es');
+}
+
 function updateLanguageButton() {
-    const langBtn = document.getElementById('lang-toggle');
     const langFlag = document.getElementById('lang-flag');
     const langText = document.getElementById('lang-text');
-    
-    if (langBtn) {
-        if (currentLang === 'es') {
-            langFlag.src = 'assets/icons/spain_flag.png';
-            langFlag.alt = 'Español';
-            langText.textContent = 'ES';
-        } else {
-            langFlag.src = 'assets/icons/uk_flag.png';
-            langFlag.alt = 'English';
-            langText.textContent = 'EN';
-        }
+    if (!langFlag || !langText) return;
+
+    if (currentLang === 'es') {
+        langFlag.src = 'assets/icons/spain_flag.png';
+        langFlag.alt = 'Español';
+        langText.textContent = 'ES';
+    } else {
+        langFlag.src = 'assets/icons/uk_flag.png';
+        langFlag.alt = 'English';
+        langText.textContent = 'EN';
     }
 }
 
-// Función para actualizar todo el contenido de la página
+// ===== ACTUALIZACIÓN DE CONTENIDO =====
+
 function updatePageContent() {
     const t = translations[currentLang];
-    
-    // Actualizar navegación
-    const navLinks = document.querySelectorAll('.nav-menu li a:not(.lang-toggle-btn)');
-    if (navLinks.length >= 5) {
-        navLinks[0].textContent = t.nav.inicio;
-        navLinks[1].textContent = t.nav.habilidades;
-        navLinks[2].textContent = t.nav.publicaciones;
-        navLinks[3].textContent = t.nav.proyectos;
-        navLinks[4].textContent = t.nav.contacto;
-    }
-    
-    // Actualizar Hero
-    const heroTitle = document.querySelector('#inicio h1');
-    const heroSubtitle = document.querySelector('#inicio .subtitle');
+
+    _updateNav(t);
+    _updateHero(t);
+    _updateAbout(t);
+    _updateResearchFields(t);
+    _updateSkills(t);
+    _updatePublications(t);
+    _updateConferences(t);
+    _updateProjects(t);
+    _updateTFMs(t);
+    _updateContact(t);
+    _updateFooter(t);
+}
+
+function _updateNav(t) {
+    const links = document.querySelectorAll('.nav-menu li a:not(.lang-toggle-btn)');
+    const keys = ['inicio', 'habilidades', 'publicaciones', 'proyectos', 'contacto'];
+    keys.forEach((key, i) => setNodeText(links, i, t.nav[key]));
+}
+
+function _updateHero(t) {
+    setText('#inicio h1', t.hero.title);
+    setText('#inicio .subtitle', t.hero.subtitle);
+
     const affiliations = document.querySelectorAll('#inicio .affiliation');
-    if (heroTitle) heroTitle.textContent = t.hero.title;
-    if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
-    if (affiliations[0]) affiliations[0].textContent = t.hero.lab;
-    if (affiliations[1]) affiliations[1].textContent = t.hero.group;
-    if (affiliations[2]) affiliations[2].textContent = t.hero.institute;
-    if (affiliations[3]) affiliations[3].textContent = t.hero.university;
-    
-    const keywordSpans = document.querySelectorAll('#inicio .keywords span');
-    t.hero.keywords.forEach((kw, i) => {
-        if (keywordSpans[i]) keywordSpans[i].textContent = kw;
+    ['lab', 'group', 'institute', 'university'].forEach((key, i) => {
+        setNodeText(affiliations, i, t.hero[key]);
     });
-    
-    const cvButton = document.querySelector('#inicio .cv-button');
-    if (cvButton) cvButton.innerHTML = `<span class="button-icon">📄</span> ${t.hero.cvButton}`;
-    
-    // Actualizar Sobre Mí
-    const aboutTitle = document.querySelector('#sobre-mi h2');
-    if (aboutTitle) aboutTitle.textContent = t.about.title;
-    const aboutTexts = document.querySelectorAll('#sobre-mi .about-text p');
-    if (aboutTexts[0]) aboutTexts[0].textContent = t.about.text1;
-    if (aboutTexts[1]) aboutTexts[1].textContent = t.about.text2;
-    if (aboutTexts[2]) aboutTexts[2].textContent = t.about.text3;
-    if (aboutTexts[3]) aboutTexts[3].textContent = t.about.text4;
-    
-    // Actualizar Campos de Investigación
-    const fieldsTitle = document.querySelector('#campos-investigacion h2');
-    if (fieldsTitle) fieldsTitle.textContent = t.researchFields.title;
-    const fieldsSubtitle = document.querySelector('#campos-investigacion .section-subtitle');
-    if (fieldsSubtitle) fieldsSubtitle.textContent = t.researchFields.subtitle;
-    
-    const fieldCards = document.querySelectorAll('#campos-investigacion .field-card');
-    if (fieldCards[0]) {
-        fieldCards[0].querySelector('h3').textContent = t.researchFields.biology.title;
-        const biologyItems = fieldCards[0].querySelectorAll('.field-list li');
-        t.researchFields.biology.items.forEach((item, i) => {
-            if (biologyItems[i]) biologyItems[i].textContent = item;
-        });
-    }
-    
-    if (fieldCards[1]) {
-        fieldCards[1].querySelector('h3').textContent = t.researchFields.neuroscience.title;
-        const neuroscienceItems = fieldCards[1].querySelectorAll('.field-list li');
-        t.researchFields.neuroscience.items.forEach((item, i) => {
-            if (neuroscienceItems[i]) neuroscienceItems[i].textContent = item;
-        });
-    }
-    
-    if (fieldCards[2]) {
-        fieldCards[2].querySelector('h3').textContent = t.researchFields.engineering.title;
-        const engineeringItems = fieldCards[2].querySelectorAll('.field-list li');
-        t.researchFields.engineering.items.forEach((item, i) => {
-            if (engineeringItems[i]) engineeringItems[i].textContent = item;
-        });
-    }
-    
-    // Actualizar Habilidades
-    const skillsTitle = document.querySelector('#habilidades h2');
-    if (skillsTitle) skillsTitle.textContent = t.skills.title;
-    const skillsSubtitle = document.querySelector('#habilidades .section-subtitle');
-    if (skillsSubtitle) skillsSubtitle.textContent = t.skills.subtitle;
-    
-    const categoryTitles = document.querySelectorAll('#habilidades .category-title');
-    if (categoryTitles[0]) categoryTitles[0].innerHTML = `<span class="category-icon">💻</span> ${t.skills.programming}`;
-    if (categoryTitles[1]) categoryTitles[1].innerHTML = `<span class="category-icon">🔬</span> ${t.skills.experimental}`;
-    if (categoryTitles[2]) categoryTitles[2].innerHTML = `<span class="category-icon">🛠️</span> ${t.skills.tools}`;
-    if (categoryTitles[3]) categoryTitles[3].innerHTML = `<span class="category-icon">🤝</span> ${t.skills.softSkills}`;
-    if (categoryTitles[4]) categoryTitles[4].innerHTML = `<span class="category-icon">🌐</span> ${t.skills.languages}`;
-    
-    // Actualizar Publicaciones
-    const pubsTitle = document.querySelector('#publicaciones h2');
-    if (pubsTitle) pubsTitle.textContent = t.publications.title;
-    
-    // Actualizar Congresos
-    const confTitle = document.querySelector('#congresos h2');
-    if (confTitle) confTitle.textContent = t.conferences.title;
-    const confSubtitle = document.querySelector('#congresos .section-subtitle');
-    if (confSubtitle) confSubtitle.textContent = t.conferences.subtitle;
-    
+
+    const keywordSpans = document.querySelectorAll('#inicio .keywords span');
+    t.hero.keywords.forEach((kw, i) => setNodeText(keywordSpans, i, kw));
+
+    const cvBtn = document.querySelector('#inicio .cv-button');
+    if (cvBtn) cvBtn.innerHTML = `<span class="button-icon">📄</span> ${t.hero.cvButton}`;
+}
+
+function _updateAbout(t) {
+    setText('#sobre-mi h2', t.about.title);
+    const paras = document.querySelectorAll('#sobre-mi .about-text p');
+    ['text1', 'text2', 'text3', 'text4'].forEach((key, i) => setNodeText(paras, i, t.about[key]));
+}
+
+function _updateResearchFields(t) {
+    setText('#campos-investigacion h2', t.researchFields.title);
+    setText('#campos-investigacion .section-subtitle', t.researchFields.subtitle);
+
+    const cards = document.querySelectorAll('#campos-investigacion .field-card');
+    const fieldKeys = ['biology', 'neuroscience', 'engineering'];
+
+    fieldKeys.forEach((key, i) => {
+        const card = cards[i];
+        if (!card) return;
+        const field = t.researchFields[key];
+        card.querySelector('h3').textContent = field.title;
+        const listItems = card.querySelectorAll('.field-list li');
+        field.items.forEach((item, j) => setNodeText(listItems, j, item));
+    });
+}
+
+function _updateSkills(t) {
+    setText('#habilidades h2', t.skills.title);
+    setText('#habilidades .section-subtitle', t.skills.subtitle);
+
+    const catTitles = document.querySelectorAll('#habilidades .category-title');
+    const catDefs = [
+        { icon: '💻', key: 'programming' },
+        { icon: '🔬', key: 'experimental' },
+        { icon: '🛠️', key: 'tools' },
+        { icon: '🎮', key: 'environments3d' },
+        { icon: '🔧', key: 'devices' },
+        { icon: '🤝', key: 'softSkills' },
+        { icon: '🌐', key: 'languages' }
+    ];
+    catDefs.forEach(({ icon, key }, i) => {
+        if (catTitles[i]) {
+            catTitles[i].innerHTML = `<span class="category-icon">${icon}</span> ${t.skills[key]}`;
+        }
+    });
+}
+
+function _updatePublications(t) {
+    setText('#publicaciones h2', t.publications.title);
+}
+
+function _updateConferences(t) {
+    setText('#congresos h2', t.conferences.title);
+    setText('#congresos .section-subtitle', t.conferences.subtitle);
+
     const filterBtns = document.querySelectorAll('.filter-btn');
-    if (filterBtns[0]) filterBtns[0].textContent = t.conferences.filters.all;
-    if (filterBtns[1]) filterBtns[1].textContent = t.conferences.filters["2025"];
-    if (filterBtns[2]) filterBtns[2].textContent = t.conferences.filters["2024"];
-    if (filterBtns[3]) filterBtns[3].textContent = t.conferences.filters["2023"];
-    if (filterBtns[4]) filterBtns[4].textContent = t.conferences.filters["2022"];
-    
-    // Actualizar Proyectos
-    const projectsTitle = document.querySelector('#investigacion h2');
-    if (projectsTitle) projectsTitle.textContent = t.projects.title;
-    const projectCards = document.querySelectorAll('#investigacion .project-card');
-    if (projectCards[0]) {
-        projectCards[0].querySelector('h3').textContent = t.projects.phd.title;
-        projectCards[0].querySelector('.project-role').innerHTML = `<strong>${t.projects.phd.role.split(' - ')[0]}</strong> - ${t.projects.phd.role.split(' - ').slice(1).join(' - ')}`;
-        projectCards[0].querySelector('.project-desc').textContent = t.projects.phd.desc;
-        projectCards[0].querySelector('.project-institution').textContent = t.projects.phd.institution;
+    const filterKeys = ['all', '2025', '2024', '2023', '2022'];
+    filterKeys.forEach((key, i) => setNodeText(filterBtns, i, t.conferences.filters[key]));
+
+    // Actualizar contador si está visible
+    const counter = document.querySelector('.conference-counter');
+    if (counter) {
+        const visible = document.getElementById('visible-count')?.textContent || '0';
+        const total = document.getElementById('total-count')?.textContent || '0';
+        counter.innerHTML = `${t.conferences.counter} <span id="visible-count">${visible}</span> ${t.conferences.of} <span id="total-count">${total}</span> ${t.conferences.communications}`;
     }
-    
-    if (projectCards[1]) {
-        projectCards[1].querySelector('h3').textContent = t.projects.semg.title;
-        projectCards[1].querySelector('.project-role').innerHTML = `<strong>${t.projects.semg.role.split(' - ')[0]}</strong> - ${t.projects.semg.role.split(' - ').slice(1).join(' - ')}`;
-        projectCards[1].querySelector('.project-desc').textContent = t.projects.semg.desc;
-        projectCards[1].querySelector('.project-institution').textContent = t.projects.semg.institution;
+}
+
+function _updateProjects(t) {
+    setText('#investigacion h2', t.projects.title);
+
+    // Subtítulos de subsecciones
+    const subsectionTitles = document.querySelectorAll('#investigacion .subsection-title');
+    if (subsectionTitles[0]) subsectionTitles[0].textContent = t.projects.unpublishedTitle;
+    if (subsectionTitles[1]) subsectionTitles[1].textContent = t.projects.fundedTitle;
+
+    // Helper para actualizar una project-card por índice
+    function updateProjectCard(card, data) {
+        if (!card || !data) return;
+        const h3 = card.querySelector('h3');
+        const role = card.querySelector('.project-role');
+        const descs = card.querySelectorAll('.project-desc');
+        const institution = card.querySelector('.project-institution');
+
+        if (h3) h3.textContent = data.title;
+        if (role && data.role) {
+            const parts = data.role.split(' - ');
+            role.innerHTML = `<strong>${parts[0]}</strong>${parts.length > 1 ? ' - ' + parts.slice(1).join(' - ') : ''}`;
+        }
+        if (descs[0] && data.desc) descs[0].textContent = data.desc;
+        if (institution && data.institution) institution.textContent = data.institution;
     }
-    
-    if (projectCards[2]) {
-        projectCards[2].querySelector('h3').textContent = t.projects.iit.title;
-        projectCards[2].querySelector('.project-role').innerHTML = `<strong>${t.projects.iit.role.split(' - ')[0]}</strong> - ${t.projects.iit.role.split(' - ').slice(1).join(' - ')}`;
-        projectCards[2].querySelector('.project-desc').textContent = t.projects.iit.desc;
-        projectCards[2].querySelector('.project-institution').textContent = t.projects.iit.institution;
-    }
-    
-    if (projectCards[3]) {
-        projectCards[3].querySelector('h3').textContent = t.projects.sharks.title;
-        projectCards[3].querySelector('.project-role').innerHTML = `<strong>${t.projects.sharks.role.split(' - ')[0]}</strong> - ${t.projects.sharks.role.split(' - ').slice(1).join(' - ')}`;
-        projectCards[3].querySelector('.project-desc').textContent = t.projects.sharks.desc;
-        projectCards[3].querySelector('.project-institution').textContent = t.projects.sharks.institution;
-    }
-    
-    // Actualizar TFMs
-    const tfmsTitle = document.querySelector('#tfms h2');
-    if (tfmsTitle) tfmsTitle.textContent = t.tfms.title;
-    const tfmsSubtitle = document.querySelector('#tfms .section-subtitle');
-    if (tfmsSubtitle) tfmsSubtitle.textContent = t.tfms.subtitle;
-    const tfmsNote = document.querySelector('#tfms .summary-note');
-    if (tfmsNote) tfmsNote.innerHTML = `<span class="note-icon">🎓</span> ${t.tfms.summary}`;
-    
-    const tfmStats = document.querySelectorAll('#tfms .summary-stat .stat-label');
-    if (tfmStats[0]) tfmStats[0].textContent = t.tfms.stats.tfms;
-    if (tfmStats[1]) tfmStats[1].textContent = t.tfms.stats.years;
-    if (tfmStats[2]) tfmStats[2].textContent = t.tfms.stats.international;
-    
-    // Actualizar Contacto
-    const contactTitle = document.querySelector('#contacto h2');
-    if (contactTitle) contactTitle.textContent = t.contact.title;
-    const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
-    if (formInputs[0]) formInputs[0].placeholder = t.contact.name;
-    if (formInputs[1]) formInputs[1].placeholder = t.contact.email;
-    if (formInputs[2]) formInputs[2].placeholder = t.contact.message;
-    const sendBtn = document.querySelector('.contact-form button');
-    if (sendBtn) sendBtn.textContent = t.contact.send;
-    
+
+    const cards = document.querySelectorAll('#investigacion .project-card');
+    const cardMap = [
+        t.projects.phd,
+        t.projects.semg,
+        t.projects.iit,
+        t.projects.sharks,
+        t.projects.kinect,
+        t.projects.unrealVR,
+        t.projects.sync,
+        t.projects.arSimulator,
+        t.projects.nextgen,
+        t.projects.prometeo,
+        t.projects.h2020
+    ];
+    cards.forEach((card, i) => updateProjectCard(card, cardMap[i]));
+}
+
+function _updateTFMs(t) {
+    setText('#tfms h2', t.tfms.title);
+    setText('#tfms .section-subtitle', t.tfms.subtitle);
+
+    const noteEl = document.querySelector('#tfms .summary-note');
+    if (noteEl) noteEl.innerHTML = `<span class="note-icon">🎓</span> ${t.tfms.summary}`;
+
+    const statLabels = document.querySelectorAll('#tfms .summary-stat .stat-label');
+    ['tfms', 'years', 'international'].forEach((key, i) => setNodeText(statLabels, i, t.tfms.stats[key]));
+}
+
+function _updateContact(t) {
+    setText('#contacto h2', t.contact.title);
+
     const emailBlock = document.querySelector('.contact-email');
     if (emailBlock) {
-        const emailP = emailBlock.querySelector('p:first-child');
-        const emailNote = emailBlock.querySelector('.email-note');
-        if (emailP) emailP.textContent = t.contact.emailDirect;
-        if (emailNote) emailNote.textContent = t.contact.emailNote;
+        const p = emailBlock.querySelector('p');
+        if (p) p.textContent = t.contact.emailDirect;
     }
-    
-    // Actualizar Footer
+}
+
+function _updateFooter(t) {
     const footerP = document.querySelector('footer p');
     if (footerP) footerP.innerHTML = `&copy; 2026 Roberto Morollón. ${t.footer.rights}`;
 }
 
-// Función para alternar idioma
-function toggleLanguage() {
-    const newLang = currentLang === 'es' ? 'en' : 'es';
-    setLanguage(newLang);
-}
+// ===== INICIALIZACIÓN =====
 
-// Inicializar
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // Restaurar idioma guardado o usar español por defecto
     const savedLang = localStorage.getItem('language');
-    if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
-        setLanguage(savedLang);
-    } else {
-        setLanguage('es');
-    }
-    
-    // Añadir evento al botón de idioma
+    setLanguage(savedLang === 'en' ? 'en' : 'es');
+
+    // Evento del botón de idioma
     const langBtn = document.getElementById('lang-toggle');
-    if (langBtn) {
-        langBtn.addEventListener('click', toggleLanguage);
-    }
+    if (langBtn) langBtn.addEventListener('click', toggleLanguage);
 });
