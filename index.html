@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Roberto Morollón, Doctor en Bioingeniería especializado en prótesis visuales corticales, neurociencias y análisis de comportamiento.">
     <meta name="keywords" content="Roberto Morollón, bioingeniería, neurociencias, prótesis visuales, investigación, neuroingeniería">
     <meta name="author" content="Roberto Morollón">
     <meta property="og:title" content="Roberto Morollón | Investigador en Neurociencias y Bioingeniería">
-    <meta property="og:description" content="Portfolio profesional de Roberto Morollón, Doctor en Bioingeniería.">
+    <meta property="og:description" content="Portfolio profesional de Roberto Morollón, Doctor en Bioingeniería especializado en prótesis visuales corticales, neurociencias y análisis de comportamiento.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://robmoru23.github.io/assets/images/profile-photo.png">
     <title>Roberto Morollón | Investigador en Neurociencias y Bioingeniería</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Fuentes profesionales: Open Sans o Lato de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- favicon -->
     <link rel="icon" type="image/png" href="assets/images/icon_face.png">
-    <style>
-        .subsection-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1a3a5c;
-            margin: 2rem 0 1rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e0e8f0;
-            letter-spacing: 0.03em;
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Roberto Morollón Ruiz",
+        "jobTitle": "Doctor en Bioingeniería",
+        "url": "https://robmoru23.github.io/",
+        "email": "robmoru23@gmail.com",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Universidad Miguel Hernández"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/roberto-morollón-ruiz-14650b13a/",
+            "https://github.com/Robmoru23",
+            "https://scholar.google.es/citations?user=SVMv6VEAAAAJ",
+            "https://orcid.org/0000-0002-9903-3296",
+            "https://www.researchgate.net/profile/Roberto-Morollon-Ruiz"
+        ]
+    }
+    </script>
 </head>
 <body>
     <div id="scroll-progress"></div>
@@ -36,16 +45,18 @@
             <div class="nav-brand">Roberto Morollón</div>
 
             <!-- Botón hamburguesa (solo visible en móvil) -->
-            <div class="menu-toggle" id="mobile-menu">
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú de navegación" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
             
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#publicaciones">Publicaciones</a></li>
+                <li><a href="#congresos">Congresos</a></li>
                 <li><a href="#investigacion">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             <!-- Botón de idioma como parte del menú -->
@@ -132,7 +143,7 @@
     <section id="campos-investigacion" class="research-fields-cards">
         <div class="container">
             <h2>Campos de Investigación</h2>
-            <p class="section-subtitle">Intersección de disciplinas para la innovación - Convergencia de saberes - Un enfoque multidisciplinar integrador</p>
+            <p class="section-subtitle">Enfoque multidisciplinar en la intersección de biología, neurociencia e ingeniería</p>
             
             <div class="cards-grid">
                 <!-- Tarjeta 1: Ciencias de la Vida -->
@@ -700,7 +711,7 @@
         <div class="container">
             <h2>Publicaciones en Revistas Científicas</h2>
             
-            <a href="https://academic.oup.com/braincomms/article/8/1/fcaf504/8455384" class="publication-link" target="_blank" rel="noopener">
+            <a href="https://academic.oup.com/braincomms/article/8/1/fcaf504/8455384" class="publication-link" target="_blank" rel="noopener noreferrer">
                 <div class="project-card">
                     <h3>The unexpected sight: improvement of visual function following intracortical microstimulation of the human occipital cortex</h3>
                     <p class="project-role"><strong>2026</strong> - Arantxa Alfaro, Leili Soo, Dorota Waclawczyk, Roberto Morollón, Fabrizio Grani, Eduardo Fernandez</p>
@@ -709,7 +720,7 @@
                 </div>
             </a>
             
-            <a href="https://ieeexplore.ieee.org/document/11184282" class="publication-link" target="_blank" rel="noopener">
+            <a href="https://ieeexplore.ieee.org/document/11184282" class="publication-link" target="_blank" rel="noopener noreferrer">
                 <div class="project-card">
                     <h3>Integrating eye-tracking with cortical visual prostheses in patients without eyes: a case Study</h3>
                     <p class="project-role"><strong>2025</strong> - Dorota Waclawczyk, Leili Soo, Roberto Morollon Ruiz, Avi Caspi, Eduardo Fernandez Jover</p>
@@ -718,7 +729,7 @@
                 </div>
             </a>
             
-            <a href="https://tvst.arvojournals.org/article.aspx?articleid=2810422" class="publication-link" target="_blank" rel="noopener">
+            <a href="https://tvst.arvojournals.org/article.aspx?articleid=2810422" class="publication-link" target="_blank" rel="noopener noreferrer">
                 <div class="project-card">
                     <h3>Enhancing Orientation and Mobility Assessments: Integrating Visual and Auditory Factors Using Artificial Intelligence Tools</h3>
                     <p class="project-role"><strong>2025</strong> - Roberto Morollón Ruiz, Joel Alejandro Cueva Garcés, Leili Soo, Eduardo Fernández</p>
@@ -727,7 +738,7 @@
                 </div>
             </a>
 
-            <a href="https://arxiv.org/abs/2205.10395" class="publication-link" target="_blank" rel="noopener">
+            <a href="https://arxiv.org/abs/2205.10395" class="publication-link" target="_blank" rel="noopener noreferrer">
                 <div class="project-card">
                     <h3>Assessing visual acuity in visual prostheses through a virtual-reality system</h3>
                     <p class="project-role"><strong>2022</strong> - Melani Sanchez-Garcia, Roberto Morollon-Ruiz, Ruben Martinez-Cantin, Jose J. Guerrero, Eduardo Fernandez-Jover</p>
@@ -758,7 +769,7 @@
             <div class="conference-grid">
                 
                 <!-- 2025 -->
-                <a href="https://link.springer.com/chapter/10.1007/978-3-032-06401-1_144" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-032-06401-1_144" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2025">
                         <div class="card-year">2025</div>
                         <h3 class="card-title">Motor Reaction Assessment in Multimodal Immersive and Laboratory Settings: A Time-Based Comparison in Athletes</h3>
@@ -772,7 +783,7 @@
                 </a>
 
                 <!-- 2024 -->
-                <a href="https://www.artificial-vision.org/" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://www.artificial-vision.org/" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2024">
                         <div class="card-year">2024</div>
                         <h3 class="card-title">Evaluating the feasibility of a cortical visual neuroprostheses based on intracortical microelectrodes for Orientation and Mobility Tasks</h3>
@@ -785,7 +796,7 @@
                     </div>
                 </a>
                 
-                <a href="https://sciforum.net/paper/view/20841" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://sciforum.net/paper/view/20841" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2024">
                         <div class="card-year">2024</div>
                         <h3 class="card-title">Multimodal Immersive Environment for Evaluating Reaction Time and Decision-Making in Sport Situations: A Pilot Study on Time Analysis and Learning Effects</h3>
@@ -798,7 +809,7 @@
                     </div>
                 </a>
 
-                <a href="https://cortivis.org/inicio/the-brain-and-the-chip-2022/congresos-thebrainandthechip/the-brain-and-the-chip/" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://cortivis.org/inicio/the-brain-and-the-chip-2022/congresos-thebrainandthechip/the-brain-and-the-chip/" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2024">
                         <div class="card-year">2024</div>
                         <h3 class="card-title">Enhancing Orientation and Mobility Assessments for Visually Impaired Individuals through AI-Based Body Tracking</h3>
@@ -811,7 +822,7 @@
                     </div>
                 </a>
                 
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-61137-7_45" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-61137-7_45" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2024">
                         <div class="card-year">2024</div>
                         <h3 class="card-title">The Implementation of Artificial Intelligence based Body Tracking for the Assessment of Orientation and Mobility Skills in Visual Impaired Individuals</h3>
@@ -825,7 +836,7 @@
                 </a>
                 
                 <!-- 2023 -->
-                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)02070-5/fulltext" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)02070-5/fulltext" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2023">
                         <div class="card-year">2023</div>
                         <h3 class="card-title">A new environment for assessing orientation and mobility in persons with severe visual impairments</h3>
@@ -838,7 +849,7 @@
                     </div> 
                 </a>
 
-                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)01538-5/fulltext" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)01538-5/fulltext" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2023">
                         <div class="card-year">2023</div>
                         <h3 class="card-title">The importance of eye movement in visual cortical prosthesis</h3>
@@ -851,7 +862,7 @@
                     </div> 
                 </a>
 
-                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)02065-1/fulltext" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://www.ibroneuroreports.org/article/S2667-2421(23)02065-1/fulltext" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2023">
                         <div class="card-year">2023</div>
                         <h3 class="card-title">Advantages of bidirectional cortical visual prostheses</h3>
@@ -864,7 +875,7 @@
                     </div> 
                 </a>    
                 
-                <a href="https://www.instagram.com/p/Cp2ddTJMfva/?__d=11" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://www.instagram.com/p/Cp2ddTJMfva/?__d=11" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2023">
                         <div class="card-year">2023</div>
                         <h3 class="card-title">Mobility and Orientation Assessment in Intracortical Visual Neuroprosthesis User</h3>
@@ -878,7 +889,7 @@
                 </a>
 
                 <!-- 2022 -->
-                <a href="https://cortivis.org/inicio/the-brain-and-the-chip-2022/" target="_blank" rel="noopener" class="conference-card-link">  
+                <a href="https://cortivis.org/inicio/the-brain-and-the-chip-2022/" target="_blank" rel="noopener noreferrer" class="conference-card-link">  
                     <div class="conference-card" data-year="2022">
                         <div class="card-year">2022</div>
                         <h3 class="card-title">Mobility and Orientation in Intracortical Visual Neuroprosthesis</h3>
@@ -891,7 +902,7 @@
                     </div>
                 </a>
 
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06242-1_38" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06242-1_38" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2022">
                         <div class="card-year">2022</div>
                         <h3 class="card-title">Horizon cyber-vision: a cybernetic approach for a cortical visual prosthesis</h3>
@@ -904,7 +915,7 @@
                     </div>   
                 </a> 
                 
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06527-9_49" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06527-9_49" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2022">
                         <div class="card-year">2022</div>
                         <h3 class="card-title">Development and validation of a novel technology for postural analysis and human kinematics</h3>
@@ -917,7 +928,7 @@
                     </div>
                 </a>
 
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06242-1_39" target="_blank" rel="noopener" class="conference-card-link">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-06242-1_39" target="_blank" rel="noopener noreferrer" class="conference-card-link">
                     <div class="conference-card" data-year="2022">
                         <div class="card-year">2022</div>
                         <h3 class="card-title">The assessment of activities of daily living skills using visual prosthesis</h3>
@@ -1297,13 +1308,17 @@
             <div class="contact-content">
                 
                 <div class="contact-email">
-                    <p>Puedes contactarme directamente en:</p>
-                    <a href="mailto:robmoru23@gmail.com" class="email-link">robmoru23@gmail.com</a>
+                    <p>📧 Puedes contactarme directamente en:</p>
+                    <button id="copyEmailBtn" class="email-copy-btn">
+                        <span class="email-address">robmoru23@gmail.com</span>
+                        <span class="copy-icon">📋</span>
+                    </button>
+                    <div id="copyToast" class="copy-toast">📋 Se ha copiado la dirección email al portapapeles</div>
                 </div>
 
                 <div class="contact-links">
                     <a href="https://www.linkedin.com/in/roberto-moroll%C3%B3n-ruiz-14650b13a/" target="_blank">
-                        <img src="assets/icons/linkedin.png" loading="lazy" loading="lazy" alt="LinkedIn icon" class="icon-photo">
+                        <img src="assets/icons/linkedin.png" loading="lazy" alt="LinkedIn icon" class="icon-photo">
                         LinkedIn
                     </a>
                     <a href="https://github.com/Robmoru23" target="_blank">
@@ -1346,7 +1361,7 @@
                     <a href="https://orcid.org/0000-0002-9903-3296" target="_blank">ORCID</a>
                     <a href="https://robmoru23.github.io/" target="_blank">robmoru23.github.io</a>
                 </div>
-                <p class="footer-copy">&copy; 2026 Roberto Morollón. Todos los derechos reservados.</p>
+                <p class="footer-copy">&copy; 2026 Roberto Morollón Ruiz. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

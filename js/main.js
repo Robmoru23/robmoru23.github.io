@@ -1,3 +1,13 @@
+// ===== CORRECCIÓN SEMÁNTICA: card-conference h3 → p =====
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('h3.card-conference').forEach(el => {
+        const p = document.createElement('p');
+        p.className = el.className;
+        p.innerHTML = el.innerHTML;
+        el.parentNode.replaceChild(p, el);
+    });
+});
+
 // ===== FILTRO DE CONGRESOS POR AÑO =====
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -19,11 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    filterButtons.forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.filter === 'all' ? 'true' : 'false'));
+
     filterButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+            filterButtons.forEach(btn => { btn.classList.remove('active'); btn.setAttribute('aria-pressed', 'false'); });
             this.classList.add('active');
+            this.setAttribute('aria-pressed', 'true');
             const filterValue = this.getAttribute('data-filter');
 
             conferenceLinks.forEach(link => {
@@ -139,8 +152,7 @@ const statsObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const summarySection = document.querySelector('.supervision-summary');
-    if (summarySection) statsObserver.observe(summarySection);
+    document.querySelectorAll('.supervision-summary').forEach(el => statsObserver.observe(el));
 });
 
 // ===== MENÚ HAMBURGUESA =====
@@ -159,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closeMenu() {
         menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
         navMenu.classList.remove('active');
         overlay.classList.remove('active');
         document.body.style.overflow = '';
@@ -166,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function openMenu() {
         menuToggle.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
         navMenu.classList.add('active');
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -197,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ===== SCROLL SUAVE PARA OTROS ENLACES =====
-document.querySelectorAll('.nav-brand a, .cv-button').forEach(anchor => {
+document.querySelectorAll('.cv-button').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
         if (targetId && targetId.startsWith('#')) {
@@ -247,3 +261,39 @@ window.addEventListener('scroll', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 })();
+
+// ===== COPIAR EMAIL AL PORTAPAPELES =====
+document.addEventListener('DOMContentLoaded', function() {
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const toast = document.getElementById('copyToast');
+    
+    if (copyBtn) {
+        copyBtn.addEventListener('click', async function() {
+            const email = 'robmoru23@gmail.com';
+            
+            try {
+                // Método moderno usando Clipboard API
+                await navigator.clipboard.writeText(email);
+                showToast();
+            } catch (err) {
+                // Fallback para navegadores antiguos
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast();
+            }
+        });
+    }
+    
+    function showToast() {
+        if (toast) {
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    }
+});
