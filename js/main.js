@@ -290,10 +290,86 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function showToast() {
         if (toast) {
+            const t = (typeof translations !== 'undefined' && typeof currentLang !== 'undefined')
+                ? translations[currentLang] : null;
+            toast.textContent = t?.contact?.copySuccess || '📋 Correo copiado al portapapeles';
             toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+            setTimeout(() => toast.classList.remove('show'), 3000);
         }
+    }
+});
+
+// ===== MODO OSCURO =====
+(function() {
+    const btn = document.getElementById('darkmode-toggle');
+    if (!btn) return;
+
+    function updateLabel() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const t = (typeof translations !== 'undefined' && typeof currentLang !== 'undefined')
+            ? translations[currentLang] : null;
+        btn.setAttribute('aria-label',
+            isDark ? (t?.ui?.darkModeOff || 'Activar modo claro')
+                   : (t?.ui?.darkModeOn  || 'Activar modo oscuro'));
+    }
+
+    btn.addEventListener('click', function() {
+        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateLabel();
+    });
+
+    document.addEventListener('DOMContentLoaded', updateLabel);
+})();
+
+// ===== FILTRO DE HABILIDADES =====
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('skills-filter');
+    const clearBtn = document.getElementById('skills-filter-clear');
+    const icon = document.getElementById('skills-filter-icon');
+    const noResults = document.getElementById('skills-no-results');
+    if (!input) return;
+
+    input.addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        clearBtn.style.display = q ? 'flex' : 'none';
+        icon.style.display = q ? 'none' : 'block';
+
+        const cards = document.querySelectorAll('.skill-card');
+        let anyVisible = false;
+
+        cards.forEach(card => {
+            const name = card.querySelector('.skill-name')?.textContent.toLowerCase() || '';
+            const tags = Array.from(card.querySelectorAll('.skill-tags span'))
+                .map(s => s.textContent.toLowerCase()).join(' ');
+            const match = !q || name.includes(q) || tags.includes(q);
+            card.style.display = match ? '' : 'none';
+            if (match) anyVisible = true;
+        });
+
+        document.querySelectorAll('.skill-category').forEach(cat => {
+            const hasVisible = Array.from(cat.querySelectorAll('.skill-card'))
+                .some(c => c.style.display !== 'none');
+            cat.style.display = (q && !hasVisible) ? 'none' : '';
+        });
+
+        if (noResults) {
+            const t = (typeof translations !== 'undefined' && typeof currentLang !== 'undefined')
+                ? translations[currentLang] : null;
+            const msg = t?.skills?.noResults
+                ? t.skills.noResults.replace('{q}', q)
+                : `Sin resultados para "${q}"`;
+            noResults.textContent = (!anyVisible && q) ? msg : '';
+            noResults.style.display = (!anyVisible && q) ? 'block' : 'none';
+        }
+    });
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+            input.value = '';
+            input.dispatchEvent(new Event('input'));
+            input.focus();
+        });
     }
 });

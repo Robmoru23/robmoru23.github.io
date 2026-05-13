@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#002855">
+    <script>(function(){const t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta name="description" content="Portfolio de Roberto Morollón, Doctor en Bioingeniería especializado en prótesis visuales corticales, neurociencias y análisis de comportamiento.">
     <meta name="keywords" content="Roberto Morollón, bioingeniería, neurociencias, prótesis visuales, investigación, neuroingeniería">
     <meta name="author" content="Roberto Morollón">
@@ -59,6 +61,12 @@
                 <li><a href="#congresos">Congresos</a></li>
                 <li><a href="#investigacion">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+            <!-- Botón modo oscuro -->
+            <li class="darkmode-menu-item">
+                <button class="darkmode-btn" id="darkmode-toggle" aria-label="Activar modo oscuro">
+                    <span class="dm-icon"></span>
+                </button>
+            </li>
             <!-- Botón de idioma como parte del menú -->
             <li class="lang-menu-item">
                 <button id="lang-toggle" class="lang-toggle-btn">
@@ -83,6 +91,11 @@
                 <p class="affiliation">Grupo de Neuroingeniería Biomédica</p>
                 <p class="affiliation">Instituto de Bioingeniería</p>
                 <p class="affiliation">Universidad Miguel Hernández</p>
+
+                <div class="availability-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Disponible para incorporación · Alicante, España</span>
+                </div>
 
                 <div class="keywords">
                     <span>Bioingeniería</span>
@@ -128,6 +141,15 @@
                             <span class="about-stat-number">7</span>
                             <span class="about-stat-label">TFMs dirigidos</span>
                         </div>
+                        <!-- Actualiza estos valores con tu h-index y citaciones reales (Google Scholar) -->
+                        <div class="about-stat">
+                            <span class="about-stat-number">—</span>
+                            <span class="about-stat-label">Citaciones</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">—</span>
+                            <span class="about-stat-label">h-index</span>
+                        </div>
                     </div>
                 </div>                
                 <div class="about-text">
@@ -135,6 +157,53 @@
                     <p>Apasionado por la intersección entre biología, neurociencia, robótica y comportamiento, desarrollo soluciones que conectan la tecnología con el potencial humano para restaurar capacidades sensoriales perdidas.</p>
                     <p>Durante los últimos años, en el Laboratorio de Neuroprótesis Visuales de la Universidad Miguel Hernández, he desarrollado el análisis comportamental para prótesis visuales corticales, explorando cómo la neurociencia y la ingeniería pueden converger para restaurar la percepción visual en personas ciegas.</p>
                     <p>Mi investigación combina análisis de datos (Python, MATLAB, C++), neuroimagen, electrofisiología, modelos computacionales y deep learning. Colaboro activamente en equipos multidisciplinares, presentando regularmente mis hallazgos en conferencias internacionales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Career timeline -->
+        <div class="career-timeline">
+            <p class="career-timeline-heading">Trayectoria Académica</p>
+            <div class="timeline-scroll">
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <span class="tl-year">2017</span>
+                        <span class="tl-title">Grado en Biología</span>
+                        <span class="tl-place">Universidad de Alicante</span>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <span class="tl-year">2019</span>
+                        <span class="tl-title">Máster en Neurociencias</span>
+                        <span class="tl-place">Universidad Miguel Hernández</span>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <span class="tl-year">2020</span>
+                        <span class="tl-title">Máster en Robótica</span>
+                        <span class="tl-place">Universidad de Alicante</span>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <span class="tl-year">2020</span>
+                        <span class="tl-title">Investigador Predoctoral</span>
+                        <span class="tl-place">UMH · Instituto de Bioingeniería</span>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <span class="tl-year">2025–26</span>
+                        <span class="tl-title">3 Publicaciones Q1</span>
+                        <span class="tl-place">IEEE · Brain Comms · TVST</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,7 +267,14 @@
     <div class="container">
         <h2>Habilidades Técnicas</h2>
         <p class="section-subtitle">Tecnologías, herramientas y metodologías que domino en mi investigación</p>
-        
+
+        <div class="skills-filter-wrap">
+            <input type="text" id="skills-filter" class="skills-filter-input" placeholder="Buscar habilidad o tecnología..." autocomplete="off" spellcheck="false">
+            <span class="skills-filter-icon" id="skills-filter-icon">🔍</span>
+            <button class="filter-clear-btn" id="skills-filter-clear" aria-label="Borrar búsqueda">✕</button>
+        </div>
+        <div id="skills-no-results" class="skills-no-results" style="display:none"></div>
+
         <!-- ===== CATEGORÍA 1: PROGRAMACIÓN Y ANÁLISIS DE DATOS ===== -->
         <div class="skill-category">
             <h3 class="category-title">
